@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterx/core.dart';
 
-
-
-
 class EmoneyTopupView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -35,6 +32,29 @@ class EmoneyTopupView extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  if (controller.selectedPayment != null)
+                    Container(
+                      height: 100.0,
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(
+                            16.0,
+                          ),
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey.withOpacity(0.2),
+                            spreadRadius: 4,
+                            blurRadius: 5,
+                            offset: Offset(0, 7),
+                          ),
+                        ],
+                      ),
+                    ),
+                  SizedBox(
+                    height: 20.0,
+                  ),
                   Text(
                     "Amount",
                     style: TextStyle(

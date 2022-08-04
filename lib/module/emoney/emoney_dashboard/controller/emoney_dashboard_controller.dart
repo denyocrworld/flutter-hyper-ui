@@ -59,4 +59,25 @@ class EmoneyDashboardController extends GetxController {
     'assets/image/promotion/promo-2.jpg',
     'assets/image/promotion/promo-3.jpg',
   ];
+
+  List products = [
+    {
+      "product_name": "Orange",
+      "photo":
+          "https://i.ibb.co/58HqsTT/photo-1503508343067-c4103b7140b3-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
+      "price": 14,
+    },
+    {
+      "product_name": "Orange",
+      "photo":
+          "https://i.ibb.co/k87SYt0/photo-1517481705099-72660903e569-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
+      "price": 15,
+    },
+    {
+      "product_name": "Orange",
+      "photo":
+          "https://i.ibb.co/D1LGfph/photo-1495624423019-fdbb969dd0fe-crop-entropy-cs-tinysrgb-fit-max-fm-jpg-ixid-Mnwy-ODA4-ODh8-MHwxf-H.jpg",
+      "price": 21,
+    },
+  ];
 }

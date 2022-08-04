@@ -1,6 +1,5 @@
 import 'package:flutterx/core.dart';
-
-
+import 'package:flutterx/data/session/app_session.dart';
 
 class EmoneyTopupController extends GetxController {
   EmoneyTopupView? view;
@@ -58,6 +57,15 @@ class EmoneyTopupController extends GetxController {
   doTopup() async {
     showLoading();
     await Future.delayed(Duration(seconds: 2));
+
+    // await userCollection.update({
+    //   "balance": FieldValue.increment(double.parse(selectedAmount["amount"])),
+    // });
+
+    await userCollection.update({
+      "balance": FieldValue.increment(double.parse(selectedAmount!["amount"])),
+    });
+
     hideLoading();
     Get.back();
   }

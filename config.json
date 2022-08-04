@@ -3,6 +3,7 @@
         "dev/dev_apps",
         "social_media/social_media_login",
         "social_media/social_media_new_post",
-        "social_media/social_media_main_navigation"
+        "social_media/social_media_main_navigation",
+        "emoney/emoney_tutorial_form"
     ]
 }

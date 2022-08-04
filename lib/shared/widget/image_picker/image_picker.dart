@@ -7,7 +7,6 @@ import 'package:path/path.dart' as path;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
 import '../image/network_image.dart';
 
 FilePickerCross? pickedFileInImagePicker;

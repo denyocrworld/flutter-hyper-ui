@@ -28,6 +28,7 @@ class EmoneyLoginController extends GetxController {
         email: email,
         password: password,
       );
+
       await UserService.saveCurrentUserData();
     } on Exception catch (_) {
       showError("Failed", "Login failed");

@@ -1,11 +1,9 @@
 import 'package:flutterx/core.dart';
 import 'dart:math';
 
-
 import 'package:flutter/material.dart';
-
-
-
+import 'package:flutterx/data/session/app_session.dart';
+import 'package:flutterx/module/emoney/emoney_tutorial_form/view/emoney_tutorial_form_view.dart';
 
 class EmoneyHelpView extends StatelessWidget {
   @override
@@ -23,6 +21,9 @@ class EmoneyHelpView extends StatelessWidget {
             padding: const EdgeInsets.all(20.0),
             child: Column(
               children: [
+                SizedBox(
+                  height: 20.0,
+                ),
                 Container(
                   color: Colors.red[200],
                   child: Row(
@@ -31,16 +32,7 @@ class EmoneyHelpView extends StatelessWidget {
                         child: ExButton(
                           label: "Add",
                           onPressed: () {
-                            FirebaseFirestore.instance
-                                .collection("products")
-                                .add({
-                              "photo":
-                                  "https://i.ibb.co/qmcDCRn/2-27310-this-product-design-is-laptop-free-button-about.jpg",
-                              "product_name":
-                                  "Product ${Random().nextInt(1000)}",
-                              "category": "Electronics",
-                              "price": Random().nextInt(1000),
-                            });
+                            Get.to(EmoneyTutorialFormView());
                           },
                         ),
                       ),
@@ -66,6 +58,24 @@ class EmoneyHelpView extends StatelessWidget {
                 SizedBox(
                   height: 20.0,
                 ),
+                StreamBuilder<DocumentSnapshot<Object?>>(
+                  stream: userCollection.snapshots(),
+                  builder: (context, snapshot) {
+                    if (snapshot.hasError) return Text("Error");
+                    if (!snapshot.hasData) return Text("No Data");
+                    Map item = (snapshot.data!.data() as Map);
+
+                    return Text(
+                      "\$${item["balance"]}",
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    );
+                  },
+                ),
+                SizedBox(
+                  height: 20.0,
+                ),
                 Container(
                   height: 400.0,
                   color: Colors.green[200],
@@ -85,6 +95,7 @@ class EmoneyHelpView extends StatelessWidget {
                       }
 
                       final data = snapshot.requireData;
+
                       return ListView.builder(
                         itemCount: data.size,
                         itemBuilder: (context, index) {

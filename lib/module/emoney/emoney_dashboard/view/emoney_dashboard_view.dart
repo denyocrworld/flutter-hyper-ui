@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutterx/core.dart';
 
+import '../../../../data/session/app_session.dart';
+
 class EmoneyDashboardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -116,13 +118,22 @@ class EmoneyDashboardView extends StatelessWidget {
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          Text(
-                            '186.073',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 26,
-                            ),
+                          StreamBuilder<DocumentSnapshot<Object?>>(
+                            stream: userCollection.snapshots(),
+                            builder: (context, snapshot) {
+                              if (snapshot.hasError) return Text("Error");
+                              if (!snapshot.hasData) return Text("No Data");
+                              Map item = (snapshot.data!.data() as Map);
+
+                              return Text(
+                                '${item["balance"]}',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 26,
+                                ),
+                              );
+                            },
                           ),
                         ],
                       ),

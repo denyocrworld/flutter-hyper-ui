@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutterx/core.dart';
 import '../controller/social_media_new_post_controller.dart';
 
-
-
 class SocialMediaNewPostView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,7 +18,7 @@ class SocialMediaNewPostView extends StatelessWidget {
               ExButton(
                 label: "Post",
                 color: warningColor,
-                onPressed: () {},
+                onPressed: () => controller.doPost(),
               ),
             ],
           ),

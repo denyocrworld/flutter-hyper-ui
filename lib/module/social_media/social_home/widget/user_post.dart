@@ -4,12 +4,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../model/content_model.dart';
 
 class UserPost extends StatelessWidget {
-  const UserPost({
-    Key? key,
-    required this.content,
-  }) : super(key: key);
-
-  final Content content;
+  final Map item;
+  UserPost({
+    required this.item,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +23,12 @@ class UserPost extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 20,
-                    backgroundImage: NetworkImage(content.userImageUrl),
+                    backgroundImage: NetworkImage(item["user_photo"]),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: Text(
-                      content.user,
+                      item["name"] ?? "-",
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
@@ -51,7 +49,7 @@ class UserPost extends StatelessWidget {
         SizedBox(
           height: 300,
           child: Image.network(
-            content.largeImageUrl,
+            item["photo"],
             fit: BoxFit.cover,
           ),
         ),
@@ -91,7 +89,7 @@ class UserPost extends StatelessWidget {
           child: Row(
             children: [
               Text(
-                '${content.likes} likes ',
+                '${item["likes"]} likes ',
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,
                 ),
@@ -106,12 +104,12 @@ class UserPost extends StatelessWidget {
               // style: const TextStyle(color: Colors.black),
               children: [
                 TextSpan(
-                  text: '${content.user} ',
+                  text: 'John Doe',
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                TextSpan(text: content.tags),
+                TextSpan(text: item["description"]),
               ],
             ),
           ),
