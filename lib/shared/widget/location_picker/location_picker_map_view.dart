@@ -161,6 +161,8 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                 height: 50.0,
                 child: Card(
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Container(
                         child: Text("Updating Location..."),
