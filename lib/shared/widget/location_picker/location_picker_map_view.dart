@@ -300,7 +300,7 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                             child: Padding(
                               padding: const EdgeInsets.only(bottom: 50.0),
                               child: Image.network(
-                                "https://icons.iconarchive.com/icon/icons-land/vista-map-markers/96/Map-Marker-Marker-Outside-Azure-icon.png",
+                                "https://i.ibb.co/LzvYfTb/684908.png",
                                 height: 50.0,
                               ),
                             ),

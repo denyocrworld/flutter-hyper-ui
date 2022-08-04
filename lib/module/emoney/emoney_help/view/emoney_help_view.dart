@@ -1,6 +1,4 @@
 import 'package:flutterx/core.dart';
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutterx/data/session/app_session.dart';
 import 'package:flutterx/module/emoney/emoney_tutorial_form/view/emoney_tutorial_form_view.dart';
