@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:get/get.dart';
 
-class OvoDashboardView extends StatefulWidget {
-  OvoDashboardView({Key? key}) : super(key: key);
+class OvoDashboardUIView extends StatefulWidget {
+  OvoDashboardUIView({Key? key}) : super(key: key);
 
   @override
-  State<OvoDashboardView> createState() => OvoDashboardViewState();
+  State<OvoDashboardUIView> createState() => OvoDashboardUIViewState();
 }
 
-class OvoDashboardViewState extends State<OvoDashboardView> {
+class OvoDashboardUIViewState extends State<OvoDashboardUIView> {
   List<Map> categories = [
     {
       'icon': 'assets/icon/purchase-credit.png',
