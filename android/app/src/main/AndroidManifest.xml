@@ -10,7 +10,7 @@
 
 
    <application
-        android:label="flutterx"
+        android:label="Fugi App"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
