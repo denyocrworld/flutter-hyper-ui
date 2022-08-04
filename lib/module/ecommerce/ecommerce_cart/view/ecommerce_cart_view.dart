@@ -18,21 +18,16 @@ class EcommerceCartView extends StatelessWidget {
           body: Container(
             child: Row(
               children: [
-                Expanded(
-                  child: Text(
-                    "Hello",
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
+                Text(
+                  "Hello",
+                  style: TextStyle(
+                    fontSize: 20,
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Text(
-                    "World",
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),
+                Text(
+                  "World",
+                  style: TextStyle(
+                    fontSize: 20,
                   ),
                 ),
               ],
