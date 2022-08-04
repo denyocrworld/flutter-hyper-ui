@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "980120019445",
+    "project_id": "fir-berandal",
+    "storage_bucket": "fir-berandal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:980120019445:android:38a52f4a16f7273be340bc",
+        "android_client_info": {
+          "package_name": "com.codekaze.flutterx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "980120019445-d9s1coeci2mo0d87nehkcqhqviiuhd8d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5ySyAFAohJWesDG32FvB0L7JW18i7k8U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "980120019445-d9s1coeci2mo0d87nehkcqhqviiuhd8d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
