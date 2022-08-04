@@ -1,5 +1,4 @@
 import 'package:flutterx/core.dart';
-import 'package:get/get.dart';
 import '../view/social_media_new_post_view.dart';
 
 class SocialMediaNewPostController extends GetxController {

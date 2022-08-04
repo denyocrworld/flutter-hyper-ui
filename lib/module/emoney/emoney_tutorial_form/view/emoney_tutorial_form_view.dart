@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutterx/core.dart';
 import '../controller/emoney_tutorial_form_controller.dart';
 
-import 'package:get/get.dart';
-
 class EmoneyTutorialFormView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

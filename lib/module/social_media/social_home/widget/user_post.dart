@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../model/content_model.dart';
-
 class UserPost extends StatelessWidget {
   final Map item;
   UserPost({
