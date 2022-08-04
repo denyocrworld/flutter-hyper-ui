@@ -4,6 +4,11 @@
         "social_media/social_media_login",
         "social_media/social_media_new_post",
         "social_media/social_media_main_navigation",
-        "emoney/emoney_tutorial_form"
+        "emoney/emoney_tutorial_form",
+        "ecommerce/ecommerce_main_navigation",
+        "ecommerce/ecommerce_home",
+        "ecommerce/ecommerce_profile",
+        "ecommerce/ecommerce_order",
+        "ecommerce/ecommerce_cart"
     ]
 }
