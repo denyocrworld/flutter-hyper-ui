@@ -64,6 +64,6 @@
 ```
 
 ## Links
-![Saiful Bahri @ Youtube](https://www.youtube.com/channel/UCF0wkT5XmWULbLXjVsOqzqg)
+[Saiful Bahri @ Youtube]: https://www.youtube.com/channel/UCF0wkT5XmWULbLXjVsOqzqg
 
-![Deny Ocr @ Youtube](https://www.youtube.com/c/DenyOcr)
+[Deny Ocr @ Youtube]: https://www.youtube.com/c/DenyOcr
