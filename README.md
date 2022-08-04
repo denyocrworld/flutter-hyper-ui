@@ -1,16 +1,43 @@
-# flutterx
+# Fugi App
 
-A new Flutter project.
+- EMoney App
+- Social Media App
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Special Thanks To:
+```
+{
+    "name": "Saiful Bahri",
+    "email": "saiful.bahri.tl@gmail.com",
+    "as": "Instagram Like Home UI & Moderator",
+},
+{
+    "name": "Deny Ocr",
+    "email": "denyocr.world@gmail.com",
+    "as": "Pembawa Materi",
+},
+{
+    "name": "Danu Septian",
+    "email": "danuseptian1996@gmail.com",
+    "as": "OVO Like Dashboard UI",
+},
+{
+    "name": "Febri Annisa",
+    "email": "febriannisarisa21@gmail.com",
+    "as": "Contributor @ Flamelearning UI Kit",
+},
+{
+    "name": "Jaisy Al Huda",
+    "email": "jalzae@gmail.com",
+    "as": "Contributor @ Flamelearning UI Kit",
+},
+{
+    "name": "Dicky Darmawan",
+    "email": "dicky93darmawan@gmail.com",
+    "as": "Contributor @ Flamelearning UI Kit",
+},
+{
+    "name": "Muhammad Hafiz Siregar",
+    "email": "hafizmessi81@gmail.com",
+    "as": "Contributor @ Flamelearning UI Kit",
+},
+```
