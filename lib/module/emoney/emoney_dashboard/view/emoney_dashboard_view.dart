@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterx/core.dart';
 
-
-
-
 class EmoneyDashboardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
