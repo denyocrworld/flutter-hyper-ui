@@ -43,3 +43,22 @@
     "as": "Contributor @ Flamelearning UI Kit",
 },
 ```
+
+## Special Thanks To:
+```
+{
+    "name": "Imgbb",
+    "website": "https://imgbb.com/",
+    "as": "File Hosting",
+},
+{
+    "name": "Unsplash",
+    "website": "https://unsplash.com/",
+    "as": "Free Images",
+},
+{
+    "name": "Flaticon",
+    "website": "https://www.flaticon.com/",
+    "as": "Free Icon",
+},
+```
