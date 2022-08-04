@@ -3,7 +3,7 @@
 - EMoney App
 - Social Media App
 
-![preview](https://i.ibb.co/F0b1Mpf/materi.jpg)
+![preview](https://i.ibb.co/F0b1Mpf/materi.jpg =250x250)
 
 ## Special Thanks To:
 ```
