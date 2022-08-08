@@ -15,6 +15,21 @@ class DevAboutView extends StatelessWidget {
           appBar: AppBar(
             title: Text("DevAbout"),
           ),
+          body: Container(
+            width: MediaQuery.of(context).size.width,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "capekngoding.com",
+                  style: const TextStyle(
+                    fontSize: 22.0,
+                  ),
+                ),
+              ],
+            ),
+          ),
         );
       },
     );
