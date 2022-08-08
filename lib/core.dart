@@ -38,11 +38,9 @@ export 'package:flutterx/shared/widget/navigation/navigation.dart';
 export 'package:flutterx/shared/widget/radio/radio.dart';
 export 'package:flutterx/shared/widget/radio/switch.dart';
 export 'package:flutterx/shared/widget/rating/rating.dart';
-export 'package:flutterx/shared/widget/safe_scroll_view/safe_scroll_view.dart';
 export 'package:flutterx/shared/widget/search/searchbar.dart';
 export 'package:flutterx/shared/widget/search_picker/search_picker.dart';
 export 'package:flutterx/shared/widget/textfield/searchfield.dart';
 export 'package:flutterx/shared/widget/textfield/textarea.dart';
 export 'package:flutterx/shared/widget/textfield/textfield.dart';
-
 export 'package:get/get.dart';
