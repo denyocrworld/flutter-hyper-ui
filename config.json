@@ -2,6 +2,8 @@
     "modules": [
         "dev_main_navigation",
         "dev_dashboard",
+        "dev_ui_kit",
+        "dev_pages",
         "dev_about"
     ]
 }
