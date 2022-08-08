@@ -1,4 +1,3 @@
-
 import 'package:flutterx/core.dart';
 import 'package:flutter/material.dart';
 
@@ -104,7 +103,8 @@ class ExColorPickerState extends State<ExColorPicker>
         builder: (context) {
           return AlertDialog(
             title: const Text('Pick a color!'),
-            content: SafeScrollView(
+            content: SingleChildScrollView(
+              controller: ScrollController(),
               child: ColorPicker(
                 pickerColor: selectedValue!,
                 onColorChanged: (color) {
