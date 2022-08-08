@@ -1,4 +1,4 @@
-import 'package:flutterx/data/session/app_session.dart';
+import 'package:flutterx/core.dart';
 
 class UserService {
   static saveCurrentUserData() async {

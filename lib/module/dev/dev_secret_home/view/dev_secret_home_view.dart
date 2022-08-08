@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutterx/core.dart';
-import 'package:flutterx/module/dev/demo_extension/view/demo_extension_view.dart';
-import '../controller/dev_secret_home_controller.dart';
 
 class DevSecretHomeView extends StatelessWidget {
   @override
@@ -21,10 +19,6 @@ class DevSecretHomeView extends StatelessWidget {
               padding: EdgeInsets.all(20.0),
               child: Column(
                 children: [
-                  ExButton(
-                    label: "Demo Flutter Hyper Extension",
-                    onPressed: () => Get.offAll(DemoExtensionView()),
-                  ),
                   ExTextField(
                     id: "email",
                     label: "Email",

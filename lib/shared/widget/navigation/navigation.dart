@@ -4,6 +4,7 @@ import 'package:flutterx/core.dart';
 class NavigationItem {
   final String? label;
   final IconData? icon;
+
   NavigationItem({
     this.label,
     this.icon,
@@ -25,6 +26,7 @@ class ExNavigation extends StatefulWidget {
   final Widget? floatingActionButton;
   final Color? selectedColor;
   final Color? unselectedColor;
+  final PreferredSizeWidget? appBar;
 
   ExNavigation({
     Key? key,
@@ -34,6 +36,7 @@ class ExNavigation extends StatefulWidget {
     this.floatingActionButton,
     this.selectedColor,
     this.unselectedColor,
+    this.appBar,
   }) : super(key: key);
 
   @override
@@ -378,6 +381,7 @@ class _ExNavigationState extends State<ExNavigation> {
     return DefaultTabController(
       length: itemLength,
       child: Scaffold(
+        appBar: widget.appBar,
         // body: widget.type == NavigationType.appbar
         //     ? Container(
         //         child: Column(

@@ -1,13 +1,9 @@
 import 'dart:developer';
 import 'dart:io';
-
 import 'package:flutterx/core.dart';
-
 import 'package:path/path.dart' as path;
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import '../image/network_image.dart';
 
 FilePickerCross? pickedFileInImagePicker;
 FilePickerResult? filePickerResult;

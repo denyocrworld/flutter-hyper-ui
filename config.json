@@ -1,15 +1,7 @@
 {
     "modules": [
-        "dev/dev_apps",
-        "dev/demo_extension",
-        "social_media/social_media_login",
-        "social_media/social_media_new_post",
-        "social_media/social_media_main_navigation",
-        "emoney/emoney_tutorial_form",
-        "ecommerce/ecommerce_main_navigation",
-        "ecommerce/ecommerce_home",
-        "ecommerce/ecommerce_profile",
-        "ecommerce/ecommerce_order",
-        "ecommerce/ecommerce_cart"
+        "dev_main_navigation",
+        "dev_dashboard",
+        "dev_about"
     ]
 }
