@@ -75,21 +75,29 @@ class _ExLocationPickerState extends State<ExLocationPicker> {
               onPressed: () async {
                 if (Platform.isAndroid || Platform.isIOS) {
                   if (await Permission.location.request().isGranted) {
-                    await Get.to(
-                      ExLocationPickerMapView(
-                        id: widget.id,
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ExLocationPickerMapView(
+                          id: widget.id,
+                        ),
                       ),
                     );
+
                     setState(() {});
                   }
                   return;
                 }
 
-                await Get.to(
-                  ExLocationPickerMapView(
-                    id: widget.id,
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ExLocationPickerMapView(
+                      id: widget.id,
+                    ),
                   ),
                 );
+
                 setState(() {});
               },
             ),
@@ -100,13 +108,17 @@ class _ExLocationPickerState extends State<ExLocationPicker> {
               color: primaryColor,
               icon: Icons.add_location,
               onPressed: () async {
-                await Get.to(
-                  ExLocationPickerMapView(
-                    id: widget.id,
-                    latitude: Input.get("${widget.id}_latitude"),
-                    longitude: Input.get("${widget.id}_longitude"),
+                await Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ExLocationPickerMapView(
+                      id: widget.id,
+                      latitude: Input.get("${widget.id}_latitude"),
+                      longitude: Input.get("${widget.id}_longitude"),
+                    ),
                   ),
                 );
+
                 setState(() {});
               },
             ),
