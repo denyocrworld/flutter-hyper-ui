@@ -66,12 +66,17 @@ class ExSearchPickerState extends State<ExSearchPicker>
   }
 
   searchSearch() async {
-    await Get.to(SearchPickerSearchList(
-      futureBuilder: widget.futureBuilder,
-      labelFieldBuilder: widget.labelFieldBuilder,
-      infoFieldBuilder: widget.infoFieldBuilder,
-      idFieldBuilder: widget.idFieldBuilder,
-    ));
+    await Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => SearchPickerSearchList(
+          futureBuilder: widget.futureBuilder,
+          labelFieldBuilder: widget.labelFieldBuilder,
+          infoFieldBuilder: widget.infoFieldBuilder,
+          idFieldBuilder: widget.idFieldBuilder,
+        ),
+      ),
+    );
 
     if (selectedSearch != null) {
       // controller.text = selectedSearch!.namaSearch.toString();
@@ -279,7 +284,7 @@ class _SearchPickerSearchListState extends State<SearchPickerSearchList> {
                   return InkWell(
                     onTap: () {
                       selectedSearch = item;
-                      Get.back();
+                      Navigator.pop(context);
                     },
                     child: Card(
                       child: ListTile(

@@ -156,7 +156,7 @@ class _ExImagePickerState extends State<ExImagePicker>
         }
       },
       child: Container(
-        width: Get.width,
+        width: MediaQuery.of(context).size.width,
         padding: EdgeInsets.all(10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -191,7 +191,7 @@ class _ExImagePickerState extends State<ExImagePicker>
                   child: ExImage(
                     imageUrl!,
                     height: 100,
-                    width: Get.width / 3,
+                    width: MediaQuery.of(context).size.width / 3,
                     fit: BoxFit.cover,
                   ),
                 ),

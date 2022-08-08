@@ -1,6 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:uuid/uuid.dart';
 
 class PowerList extends StatefulWidget {
@@ -151,7 +150,7 @@ class PowerListState extends State<PowerList> {
 
     return Container(
       height: widget.height,
-      width: Get.width,
+      width: MediaQuery.of(context).size.width,
       padding: EdgeInsets.all(widget.padding ?? 0.0),
       decoration: BoxDecoration(
         color: widget.color,

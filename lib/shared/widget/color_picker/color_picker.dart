@@ -157,7 +157,7 @@ class ExColorPickerState extends State<ExColorPicker>
           top: 4.0,
           bottom: 4.0,
         ),
-        width: Get.width,
+        width: MediaQuery.of(context).size.width,
         child: Text(
           widget.label,
         ),
@@ -166,7 +166,7 @@ class ExColorPickerState extends State<ExColorPicker>
 
     return Container(
       padding: EdgeInsets.all(10.0),
-      width: Get.width,
+      width: MediaQuery.of(context).size.width,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[

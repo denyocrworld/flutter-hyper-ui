@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutterx/core.dart';
 import '../controller/dev_ui_kit_controller.dart';
 
-import 'package:get/get.dart';
-
 class DevUiKitView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

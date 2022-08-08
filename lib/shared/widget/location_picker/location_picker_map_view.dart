@@ -157,7 +157,7 @@ class LocationPickerMapState extends State<LocationPickerMap> {
             Align(
               alignment: Alignment.center,
               child: Container(
-                width: Get.width / 2,
+                width: MediaQuery.of(context).size.width / 2,
                 height: 50.0,
                 child: Card(
                   child: Row(

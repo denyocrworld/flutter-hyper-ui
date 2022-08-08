@@ -62,7 +62,7 @@ class _ExNavigationState extends State<ExNavigation> {
           elevation: 2.0,
           child: Container(
             height: 60.0,
-            width: Get.width,
+            width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(
                 Radius.circular(12.0),
@@ -127,7 +127,7 @@ class _ExNavigationState extends State<ExNavigation> {
           elevation: 2.0,
           child: Container(
             height: 60.0,
-            width: Get.width,
+            width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(
                 Radius.circular(12.0),
@@ -150,7 +150,7 @@ class _ExNavigationState extends State<ExNavigation> {
                         child: Stack(
                           children: [
                             Container(
-                              width: Get.width,
+                              width: MediaQuery.of(context).size.width,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -303,7 +303,7 @@ class _ExNavigationState extends State<ExNavigation> {
                       if (selectedIndex == index)
                         Container(
                           height: 2.0,
-                          width: Get.width / 4,
+                          width: MediaQuery.of(context).size.width / 4,
                           decoration: BoxDecoration(
                             color: primaryColor,
                             borderRadius: BorderRadius.all(
@@ -387,7 +387,7 @@ class _ExNavigationState extends State<ExNavigation> {
         //         child: Column(
         //           children: [
         //             Container(
-        //               width: Get.width,
+        //               width: MediaQuery.of(context).size.width,
         //               height: 200.0,
         //               color: Colors.blue,
         //             ),
