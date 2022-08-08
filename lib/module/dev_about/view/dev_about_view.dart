@@ -16,11 +16,23 @@ class DevAboutView extends StatelessWidget {
             title: Text("DevAbout"),
           ),
           body: Container(
+            padding: const EdgeInsets.all(20.0),
             width: MediaQuery.of(context).size.width,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Text(
+                  """
+Flutter Hyper UI Kit contains a collection of UI Kits that are useful for creating Forms in Flutter.
+Currently, our focus is only on creating Forms. But it is possible that we will also make other ui.
+"""
+                      .trim(),
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(
+                  height: 20.0,
+                ),
                 Text(
                   "capekngoding.com",
                   style: const TextStyle(
