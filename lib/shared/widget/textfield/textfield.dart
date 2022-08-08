@@ -48,8 +48,6 @@ class _ExTextFieldState extends State<ExTextField>
     implements InputControlState {
   TextEditingController controller = TextEditingController();
 
-  late GetStyle theme;
-
   @override
   void initState() {
     super.initState();
@@ -57,7 +55,6 @@ class _ExTextFieldState extends State<ExTextField>
     textFieldController[widget.id] = controller;
     Input.set(widget.id, widget.value);
     Input.inputController[widget.id] = this;
-    theme = getStyle(widget.style);
   }
 
   setValue(value) {
@@ -98,7 +95,6 @@ class _ExTextFieldState extends State<ExTextField>
               ),
               child: Text(
                 widget.label!,
-                style: theme.labelStyle,
               ),
             ),
             SizedBox(
@@ -109,13 +105,11 @@ class _ExTextFieldState extends State<ExTextField>
             child: Container(
               padding: EdgeInsets.all(10.0),
               decoration: BoxDecoration(
-                color: theme.color,
                 border: Border.all(
-                  width: theme.borderWidth ?? 1.0,
+                  width: 1.0,
                   color: Colors.grey[300]!,
                 ),
-                borderRadius:
-                    BorderRadius.all(Radius.circular(theme.radius ?? 4.0)),
+                borderRadius: BorderRadius.all(Radius.circular(4.0)),
               ),
               child: TextField(
                 controller: controller,
@@ -125,7 +119,6 @@ class _ExTextFieldState extends State<ExTextField>
                     ? true
                     : false,
                 readOnly: widget.enabled! ? false : true,
-                style: theme.valueStyle,
                 decoration: InputDecoration.collapsed(
                   hintText: widget.hintText,
                   hintStyle: TextStyle(
