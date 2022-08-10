@@ -78,6 +78,10 @@ class FlutterHyperUiKitDemoView extends StatelessWidget {
                 id: "email",
                 label: "Email",
               ),
+              ExImagePicker(
+                id: "photo",
+                label: "Photo",
+              ),
               ExLocationPicker(
                 id: "location",
                 label: "Address",

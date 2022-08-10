@@ -203,11 +203,29 @@ class _ExImagePickerState extends State<ExImagePicker>
               if (imageUrl == null)
                 Container(
                   height: 120.0,
-                  width: 160.0,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(12.0),
+                    ),
+                    color: Colors.grey[300],
+                  ),
                   child: Center(
-                    child: Icon(
-                      Icons.photo,
-                      color: Colors.grey[600],
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ImageIcon(
+                          NetworkImage(
+                            "https://cdn-icons-png.flaticon.com/128/159/159626.png",
+                          ),
+                          color: Colors.grey[600],
+                        ),
+                        const SizedBox(
+                          height: 6.0,
+                        ),
+                        Text("Upload"),
+                      ],
                     ),
                   ),
                 ),
