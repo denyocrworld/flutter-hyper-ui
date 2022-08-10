@@ -1,12 +1,7 @@
 export './core_package.dart';
 export 'package:flutterx/core.dart';
 export 'package:flutterx/core_package.dart';
-export 'package:flutterx/data/main_storage/main_storage.dart';
-export 'package:flutterx/data/session/app_session.dart';
-export 'package:flutterx/firebase_options.dart';
 export 'package:flutterx/main.dart';
-export 'package:flutterx/service/dummy_service.dart';
-export 'package:flutterx/service/user_service.dart';
 export 'package:flutterx/shared/widget/abstract/input_control/input_control.dart';
 export 'package:flutterx/shared/util/focus_helper/focus_helper.dart';
 export 'package:flutterx/shared/util/input/input.dart';

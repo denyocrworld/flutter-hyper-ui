@@ -19,6 +19,7 @@ void main() async {
     recursive: true,
   );
 
+  List usedPackages = [];
   for (var file in dirs) {
     if (file is File) {
       var content = File(file.path).readAsStringSync();
@@ -35,9 +36,13 @@ void main() async {
           if (p == projectName) continue;
           if (p == "flutter") continue;
 
-          print(line);
+          if (usedPackages.contains(p) == false) {
+            usedPackages.add(p);
+          }
         }
       }
     }
   }
+
+  print(usedPackages);
 }
