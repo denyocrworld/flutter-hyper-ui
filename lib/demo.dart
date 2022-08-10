@@ -47,6 +47,37 @@ class FlutterHyperUiKitDemoView extends StatelessWidget {
                   ),
                 ],
               ),
+              Container(
+                height: 40.0,
+                child: ListView.builder(
+                  itemCount: 5,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      height: 100.0,
+                      width: 100.0,
+                      margin: const EdgeInsets.only(right: 10.0),
+                      decoration: BoxDecoration(
+                        color: Colors.blue[900 - (index * 100)],
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(
+                            16.0,
+                          ),
+                        ),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Category ${index + 1}",
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 10.0,
+                          ),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
             ],
           ),
         ),
