@@ -109,7 +109,7 @@ class _ExTextFieldState extends State<ExTextField>
                   width: 1.0,
                   color: Colors.grey[300]!,
                 ),
-                borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                borderRadius: BorderRadius.all(Radius.circular(8.0)),
               ),
               child: TextField(
                 controller: controller,

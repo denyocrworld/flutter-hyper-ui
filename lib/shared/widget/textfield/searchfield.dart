@@ -11,13 +11,14 @@ class ExSearchField extends StatefulWidget {
   final bool? enabled;
   final Color? backgroundColor;
   final Color? borderColor;
-
+  final double? size;
   final Function(String text)? onChanged;
   final Function(String text)? onSubmitted;
 
   ExSearchField({
     required this.id,
     required this.label,
+    this.size,
     this.value = "",
     this.hintText = "",
     this.textFieldType = TextFieldType.normal,
@@ -58,47 +59,48 @@ class _ExSearchFieldState extends State<ExSearchField>
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: [
-        Container(
-          padding: EdgeInsets.only(
-            left: 12.0,
-            right: 12.0,
-          ),
-          decoration: BoxDecoration(
-            color: widget.backgroundColor,
-            border: Border.all(
-              width: 1.0,
-              color: widget.borderColor ?? Colors.grey[200]!,
-            ),
-            borderRadius: BorderRadius.all(
-              Radius.circular(12.0),
-            ),
-          ),
-          child: TextField(
-            controller: controller,
-            maxLines: widget.maxLines ?? 1,
-            obscureText:
-                widget.textFieldType == TextFieldType.password ? true : false,
-            readOnly: widget.enabled! ? false : true,
-            decoration: InputDecoration(
-              hintText: widget.hintText,
-              icon: Icon(Icons.search),
-              border: InputBorder.none,
-            ),
-            onChanged: (text) {
-              Input.set(widget.id, text);
-              if (widget.onChanged != null) return widget.onChanged!(text);
-            },
-            onSubmitted: (text) {
-              Input.set(widget.id, text);
-              if (widget.onSubmitted != null) return widget.onSubmitted!(text);
-            },
-          ),
+    double textAreaHeight = 0;
+    if (widget.maxLines != null && widget.maxLines! >= 2) {
+      textAreaHeight = (widget.size ?? md) * widget.maxLines!;
+    }
+    var height = (textAreaHeight) + (widget.size ?? md) + 50;
+
+    return Container(
+      height: widget.size ?? 50.0,
+      padding: EdgeInsets.only(
+        left: 8.0,
+        right: 8.0,
+      ),
+      decoration: BoxDecoration(
+        color: widget.backgroundColor ?? Colors.grey[200],
+        border: Border.all(
+          width: 1.0,
+          color: widget.borderColor ?? Colors.grey[200]!,
         ),
-      ],
+        borderRadius: BorderRadius.all(
+          Radius.circular(16.0),
+        ),
+      ),
+      child: TextField(
+        controller: controller,
+        maxLines: widget.maxLines ?? 1,
+        obscureText:
+            widget.textFieldType == TextFieldType.password ? true : false,
+        readOnly: widget.enabled! ? false : true,
+        decoration: InputDecoration(
+          hintText: widget.hintText,
+          icon: Icon(Icons.search),
+          border: InputBorder.none,
+        ),
+        onChanged: (text) {
+          Input.set(widget.id, text);
+          if (widget.onChanged != null) return widget.onChanged!(text);
+        },
+        onSubmitted: (text) {
+          Input.set(widget.id, text);
+          if (widget.onSubmitted != null) return widget.onSubmitted!(text);
+        },
+      ),
     );
   }
 }

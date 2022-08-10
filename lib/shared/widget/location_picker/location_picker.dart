@@ -58,9 +58,7 @@ class _ExLocationPickerState extends State<ExLocationPicker> {
             ),
             child: Text(
               (widget.label ?? "Select Location"),
-              style: TextStyle(
-                fontSize: 10.0,
-              ),
+              style: TextStyle(),
             ),
           ),
           SizedBox(
