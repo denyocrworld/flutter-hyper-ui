@@ -43,7 +43,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.codekaze.flutterx"
+        applicationId "com.codekaze.flutter_hyper_extension_ui"
         minSdkVersion 28
         targetSdkVersion 32
         versionCode flutterVersionCode.toInteger()

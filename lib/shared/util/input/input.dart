@@ -1,4 +1,4 @@
-import 'package:flutterx/core.dart';
+import 'package:flutter_hyper_extension_ui/core.dart';
 
 class Input {
   static Map<String, dynamic> values = {};

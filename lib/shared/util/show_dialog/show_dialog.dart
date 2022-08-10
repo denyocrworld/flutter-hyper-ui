@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterx/core.dart';
+import 'package:flutter_hyper_extension_ui/core.dart';
 
 import '../get/get.dart';
 

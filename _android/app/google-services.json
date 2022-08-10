@@ -1,15 +1,15 @@
 {
   "project_info": {
     "project_number": "167680267736",
-    "project_id": "flutterx-69c2a",
-    "storage_bucket": "flutterx-69c2a.appspot.com"
+    "project_id": "flutter_hyper_extension_ui-69c2a",
+    "storage_bucket": "flutter_hyper_extension_ui-69c2a.appspot.com"
   },
   "client": [
     {
       "client_info": {
         "mobilesdk_app_id": "1:167680267736:android:85acacb56e8dc22260cead",
         "android_client_info": {
-          "package_name": "com.codekaze.flutterx"
+          "package_name": "com.codekaze.flutter_hyper_extension_ui"
         }
       },
       "oauth_client": [
@@ -17,7 +17,7 @@
           "client_id": "167680267736-tnr1elvcmqrhgu8jk6ii8kvoeusvuvno.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.codekaze.flutterx",
+            "package_name": "com.codekaze.flutter_hyper_extension_ui",
             "certificate_hash": "40ccb437dd36ddb3d5259ddca3247dc6ab134683"
           }
         },

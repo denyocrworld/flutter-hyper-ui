@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
-import 'package:flutterx/core.dart';
+import 'package:flutter_hyper_extension_ui/core.dart';
 import 'package:geolocator/geolocator.dart';
 
 import 'package:latlong2/latlong.dart';
