@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:flutterx/core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutterx/module/dev_main_navigation/view/dev_main_navigation_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,7 +18,7 @@ void main() async {
   mainStorage = await Hive.openBox('mainStorage');
   Widget mainView = DevMainNavigationView();
 
-  return runApp(GetMaterialApp(
+  return runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     theme: defaultTheme,
     home: mainView,

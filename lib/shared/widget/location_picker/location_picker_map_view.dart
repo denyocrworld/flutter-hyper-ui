@@ -1,7 +1,7 @@
 import 'dart:async';
-import 'dart:convert';
 import 'dart:developer';
 import 'dart:io';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutterx/core.dart';
@@ -119,11 +119,11 @@ class LocationPickerMapState extends State<LocationPickerMap> {
 
     try {
       nominatimSearchResults.clear();
-      var apiResponse = await GetConnect().get(
+      var apiResponse = await Dio().get(
         "https://nominatim.openstreetmap.org/search/$search?format=json&limit=10",
       );
 
-      nominatimSearchResults.addAll(jsonDecode(apiResponse.bodyString!));
+      nominatimSearchResults.addAll(apiResponse.data);
       setState(() {});
     } catch (_) {
       print("Nominatim API ERROR");
