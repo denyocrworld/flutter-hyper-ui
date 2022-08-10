@@ -4,9 +4,11 @@ import 'package:flutter/material.dart';
 class ExSlider extends StatefulWidget {
   final double? height;
   final List<String> items;
+  final bool showIndicator;
   const ExSlider({
     Key? key,
     this.height = 180.0,
+    this.showIndicator = false,
     required this.items,
   }) : super(key: key);
 
@@ -62,6 +64,29 @@ class _ExSliderState extends State<ExSlider> {
         .toList();
   }
 
+  getIndicator() {
+    if (widget.showIndicator == false) return Container();
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: widget.items.asMap().entries.map((entry) {
+        return GestureDetector(
+          onTap: () => controller.animateToPage(entry.key),
+          child: Container(
+            width: 12.0,
+            height: 12.0,
+            margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
+            decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: (Theme.of(context).brightness == Brightness.dark
+                        ? Colors.white
+                        : Colors.black)
+                    .withOpacity(selectedIndex == entry.key ? 0.9 : 0.4)),
+          ),
+        );
+      }).toList(),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -83,25 +108,7 @@ class _ExSliderState extends State<ExSlider> {
                   }),
             ),
           ),
-          // Row(
-          //   mainAxisAlignment: MainAxisAlignment.center,
-          //   children: widget.items.asMap().entries.map((entry) {
-          //     return GestureDetector(
-          //       onTap: () => controller.animateToPage(entry.key),
-          //       child: Container(
-          //         width: 12.0,
-          //         height: 12.0,
-          //         margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
-          //         decoration: BoxDecoration(
-          //             shape: BoxShape.circle,
-          //             color: (Theme.of(context).brightness == Brightness.dark
-          //                     ? Colors.white
-          //                     : Colors.black)
-          //                 .withOpacity(selectedIndex == entry.key ? 0.9 : 0.4)),
-          //       ),
-          //     );
-          //   }).toList(),
-          // ),
+          getIndicator(),
         ],
       ),
     );
