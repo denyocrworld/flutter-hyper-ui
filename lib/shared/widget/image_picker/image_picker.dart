@@ -182,9 +182,36 @@ class _ExImagePickerState extends State<ExImagePicker>
             if (loading) ...[
               Container(
                 height: 120.0,
-                width: 160.0,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12.0),
+                  ),
+                  color: Colors.grey[300],
+                ),
                 child: Center(
-                  child: CircularProgressIndicator(),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ImageIcon(
+                        NetworkImage(
+                          "https://cdn-icons-png.flaticon.com/128/159/159626.png",
+                        ),
+                        color: Colors.grey[600],
+                      ),
+                      const SizedBox(
+                        height: 10.0,
+                      ),
+                      Container(
+                        width: 20.0,
+                        height: 20.0,
+                        child: CircularProgressIndicator(
+                          color: Colors.grey[600],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
@@ -192,12 +219,34 @@ class _ExImagePickerState extends State<ExImagePicker>
               if (imageUrl != null)
                 Container(
                   height: 120.0,
-                  width: 160.0,
-                  child: ExImage(
-                    imageUrl!,
-                    height: 100,
-                    width: MediaQuery.of(context).size.width / 3,
-                    fit: BoxFit.cover,
+                  width: MediaQuery.of(context).size.width,
+                  padding: const EdgeInsets.all(10.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(12.0),
+                    ),
+                    color: Colors.grey[300],
+                  ),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 100.0,
+                        width: 100.0,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: NetworkImage(
+                              imageUrl!,
+                            ),
+                            fit: BoxFit.cover,
+                          ),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(
+                              16.0,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               if (imageUrl == null)
