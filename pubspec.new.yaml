@@ -1,0 +1,51 @@
+name: flutter_hyper_extension_ui
+description: A new Flutter project.
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  mobile_scanner: ^2.0.0 #ignore
+  intl: ^0.17.0
+  google_fonts: ^2.1.0
+  file_picker: ^3.0.1
+  file_picker_cross: ^4.3.2
+  # Remove flutter image compress if image compression is works!
+  flutter_image_compress: ^1.0.0
+  image_compression: ^1.0.3
+  path_provider: ^2.0.1
+  uuid: ^3.0.4 
+  # fireverse: 0.0.7
+  # UI KIT Packages
+  flutter_rating_bar: ^4.0.0
+  flutter_colorpicker: ^1.0.3
+  flutter_map: ^0.14.0
+  latlong2: ^0.8.1
+  geolocator: ^8.0.3
+  permission_handler: ^8.3.0
+  cached_network_image: ^3.2.0
+
+  dio: ^4.0.6
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+dependency_overrides:
+  # get: 
+  #   git:
+  #     url: https://github.com/denyocrworld/getx_dark_knight
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icon/
+    - assets/audio/
+    - assets/document/
+    - assets/image/
+    - assets/image/gradient/
+    - assets/image/promotion/
+    - assets/image/product/
+    - assets/video/
+    - assets/font/
+    - assets/code/
