@@ -74,6 +74,14 @@ class FlutterHyperUiKitDemoView extends StatelessWidget {
                   },
                 ),
               ),
+              ExTextField(
+                id: "email",
+                label: "Email",
+              ),
+              ExLocationPicker(
+                id: "location",
+                label: "Address",
+              ),
             ],
           ),
         ),
