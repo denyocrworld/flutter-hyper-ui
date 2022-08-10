@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:flutterx/core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterx/shared/util/get/get.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,6 +21,7 @@ void main() async {
 
   return runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
+    navigatorKey: Get.navigatorKey,
     theme: defaultTheme,
     home: mainView,
   ));

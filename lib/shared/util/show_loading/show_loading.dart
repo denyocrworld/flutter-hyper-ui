@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import '../get/get.dart';
 
 BuildContext? loadingContext;
 bool loadingRendered = false;

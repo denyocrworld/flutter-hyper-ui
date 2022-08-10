@@ -126,20 +126,20 @@ class _ExImagePickerState extends State<ExImagePicker>
             quality: 50,
           );
 
-          final form = FormData({
-            'image': MultipartFile(
+          final formData = FormData.fromMap({
+            'image': MultipartFile.fromBytes(
               targetFile.readAsBytesSync(),
               filename: "upload.jpg",
             ),
           });
 
-          var res = await GetConnect().post(
+          var res = await Dio().post(
             // 'https://api.imgbb.com/1/upload?expiration=600&key=b55ef3fd02b80ab180f284e479acd7c4',
             'https://api.imgbb.com/1/upload?key=b55ef3fd02b80ab180f284e479acd7c4',
-            form,
+            data: formData,
           );
 
-          var data = res.body["data"];
+          var data = res.data["data"];
           var url = data["url"];
           print(url);
 

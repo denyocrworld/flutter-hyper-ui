@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutterx/core.dart';
 
+import '../get/get.dart';
+
 Future showConfirmDialog(
   String title,
   String message, {

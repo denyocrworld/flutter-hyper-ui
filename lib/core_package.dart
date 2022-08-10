@@ -3,7 +3,6 @@ export 'package:firebase_auth/firebase_auth.dart';
 export 'package:cloud_firestore/cloud_firestore.dart';
 export 'package:firebase_messaging/firebase_messaging.dart';
 export 'package:google_sign_in/google_sign_in.dart';
-export 'package:get/get.dart';
 export 'package:pull_to_refresh/pull_to_refresh.dart';
 export 'package:clipboard/clipboard.dart';
 export 'package:intl/intl.dart';
