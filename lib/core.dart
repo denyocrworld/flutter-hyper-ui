@@ -25,7 +25,6 @@ export 'package:flutter_hyper_extension_ui/shared/widget/navigation/navigation.d
 export 'package:flutter_hyper_extension_ui/shared/widget/radio/radio.dart';
 export 'package:flutter_hyper_extension_ui/shared/widget/radio/switch.dart';
 export 'package:flutter_hyper_extension_ui/shared/widget/rating/rating.dart';
-export 'package:flutter_hyper_extension_ui/shared/widget/search/searchbar.dart';
 export 'package:flutter_hyper_extension_ui/shared/widget/search_picker/search_picker.dart';
 export 'package:flutter_hyper_extension_ui/shared/widget/textfield/searchfield.dart';
 export 'package:flutter_hyper_extension_ui/shared/widget/textfield/textarea.dart';

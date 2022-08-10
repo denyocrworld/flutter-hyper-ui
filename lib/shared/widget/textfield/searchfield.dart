@@ -73,7 +73,9 @@ class _ExSearchFieldState extends State<ExSearchField>
               width: 1.0,
               color: widget.borderColor ?? Colors.grey[200]!,
             ),
-            borderRadius: BorderRadius.all(Radius.circular(20.0)),
+            borderRadius: BorderRadius.all(
+              Radius.circular(12.0),
+            ),
           ),
           child: TextField(
             controller: controller,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hyper_extension_ui/core.dart';
 import 'package:flutter_hyper_extension_ui/shared/widget/slider/slider.dart';
 
 class FlutterHyperUiKitDemoView extends StatelessWidget {
@@ -13,19 +14,14 @@ class FlutterHyperUiKitDemoView extends StatelessWidget {
       body: SingleChildScrollView(
         controller: ScrollController(),
         child: Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: EdgeInsets.all(20.0),
           child: Column(
             children: [
-              Container(
-                height: 100.0,
-                decoration: BoxDecoration(
-                  color: Colors.red[200],
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(
-                      16.0,
-                    ),
-                  ),
-                ),
+              ExSearchField(
+                id: "search",
+                label: "Search",
+                hintText: "Search",
+                onSubmitted: (text) {},
               ),
               ExSlider(
                 items: [
