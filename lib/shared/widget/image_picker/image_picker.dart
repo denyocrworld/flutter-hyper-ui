@@ -86,7 +86,6 @@ class _ExImagePickerState extends State<ExImagePicker>
           );
 
           if (uploadedImageUrl == null) {
-            Get.snackbar("Error", "Failed to upload!");
             loading = false;
             setState(() {});
             return;

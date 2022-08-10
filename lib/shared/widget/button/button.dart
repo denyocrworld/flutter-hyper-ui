@@ -36,9 +36,9 @@ class ExButton extends StatelessWidget {
     this.size,
   });
 
-  getColor() {
+  getColor(context) {
     if (outline) return Colors.white;
-    return enabled ? (color ?? Get.theme.primaryColor) : disabledColor;
+    return enabled ? (color ?? Theme.of(context).primaryColor) : disabledColor;
   }
 
   getTextColor() {
@@ -104,7 +104,7 @@ class ExButton extends StatelessWidget {
           ),
           child: Container(
             decoration: BoxDecoration(
-              color: getColor(),
+              color: getColor(context),
               borderRadius:
                   BorderRadius.all(Radius.circular(borderRadius ?? 30.0)),
               border: Border.all(

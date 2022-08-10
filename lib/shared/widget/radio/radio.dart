@@ -103,7 +103,7 @@ class _ExRadioState extends State<ExRadio> implements InputControlState {
                     child: Container(
                       decoration: BoxDecoration(
                         color: selected
-                            ? Get.theme.primaryColor
+                            ? Theme.of(context).primaryColor
                             : Colors.grey[300],
                         borderRadius: BorderRadius.all(Radius.circular(20.0)),
                       ),
