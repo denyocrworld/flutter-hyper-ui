@@ -5,10 +5,15 @@ class ExSlider extends StatefulWidget {
   final double? height;
   final List<String> items;
   final bool showIndicator;
+  final bool autoPlay;
+  final List<Widget> children;
+
   const ExSlider({
     Key? key,
     this.height = 180.0,
     this.showIndicator = false,
+    this.autoPlay = true,
+    this.children = const [],
     required this.items,
   }) : super(key: key);
 
@@ -30,33 +35,7 @@ class _ExSliderState extends State<ExSlider> {
                     child: Stack(
                       children: <Widget>[
                         Image.network(item, fit: BoxFit.cover, width: 1000.0),
-                        Positioned(
-                          bottom: 0.0,
-                          left: 0.0,
-                          right: 0.0,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              gradient: LinearGradient(
-                                colors: [
-                                  Color.fromARGB(200, 0, 0, 0),
-                                  Color.fromARGB(0, 0, 0, 0)
-                                ],
-                                begin: Alignment.bottomCenter,
-                                end: Alignment.topCenter,
-                              ),
-                            ),
-                            padding: EdgeInsets.symmetric(
-                                vertical: 10.0, horizontal: 20.0),
-                            child: Text(
-                              'No. ${widget.items.indexOf(item)} image',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ),
+                        ...widget.children,
                       ],
                     )),
               ),
@@ -98,7 +77,7 @@ class _ExSliderState extends State<ExSlider> {
               items: getImageSliders(),
               carouselController: controller,
               options: CarouselOptions(
-                  autoPlay: true,
+                  autoPlay: widget.autoPlay,
                   enlargeCenterPage: true,
                   aspectRatio: 2.0,
                   onPageChanged: (index, reason) {
