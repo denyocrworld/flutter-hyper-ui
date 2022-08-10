@@ -1,6 +1,4 @@
-export './core_package.dart';
 export 'package:flutter_hyper_extension_ui/core.dart';
-export 'package:flutter_hyper_extension_ui/core_package.dart';
 export 'package:flutter_hyper_extension_ui/main.dart';
 export 'package:flutter_hyper_extension_ui/shared/widget/abstract/input_control/input_control.dart';
 export 'package:flutter_hyper_extension_ui/shared/util/focus_helper/focus_helper.dart';
