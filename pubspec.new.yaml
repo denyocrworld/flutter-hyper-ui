@@ -1,4 +1,4 @@
-name: flutter_hyper_extension_ui
+name: flutter_hyper_ui
 description: A new Flutter project.
 publish_to: 'none'
 version: 1.0.0+1
@@ -48,4 +48,4 @@ flutter:
     - assets/image/product/
     - assets/video/
     - assets/font/
-    - assets/code/
+    - assets/code/

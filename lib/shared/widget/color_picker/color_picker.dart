@@ -1,5 +1,5 @@
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
-import 'package:flutter_hyper_extension_ui/core.dart';
+import 'package:flutter_hyper_ui/core.dart';
 import 'package:flutter/material.dart';
 
 /*

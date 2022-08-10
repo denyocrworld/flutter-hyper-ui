@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:file_picker_cross/file_picker_cross.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
-import 'package:flutter_hyper_extension_ui/core.dart';
+import 'package:flutter_hyper_ui/core.dart';
 import 'package:path/path.dart' as path;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';

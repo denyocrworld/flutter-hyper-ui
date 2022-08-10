@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hyper_extension_ui/core.dart';
-import 'package:flutter_hyper_extension_ui/shared/widget/slider/slider.dart';
+import 'package:flutter_hyper_ui/core.dart';
+import 'package:flutter_hyper_ui/shared/widget/slider/slider.dart';
 
 class FlutterHyperUiKitDemoView extends StatelessWidget {
   const FlutterHyperUiKitDemoView({Key? key}) : super(key: key);
