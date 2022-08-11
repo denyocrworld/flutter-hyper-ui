@@ -7,6 +7,7 @@ class ExRating extends StatefulWidget {
   final String label;
   final double? value;
   final dynamic onChanged;
+  final double? itemSize;
 
   final double? labelFontSize;
   final double? valueFontSize;
@@ -21,6 +22,7 @@ class ExRating extends StatefulWidget {
     this.label = "",
     this.value,
     this.onChanged,
+    this.itemSize,
     this.labelFontSize,
     this.valueFontSize,
     this.disableTranslate = false,
@@ -92,27 +94,30 @@ class ExRatingState extends State<ExRating> implements InputControlState {
     }
 
     return Container(
-      padding: EdgeInsets.all(10.0),
+      padding: EdgeInsets.all(widget.label.isNotEmpty ? 10.0 : 0.0),
       width: MediaQuery.of(context).size.width,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          if (!widget.hideLabel!) getLabel(),
-          RatingBar.builder(
-            initialRating: selectedValue,
-            minRating: 1,
-            direction: Axis.horizontal,
-            allowHalfRating: true,
-            itemCount: 5,
-            itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
-            itemSize: 28.0,
-            itemBuilder: (context, _) => Icon(
-              Icons.star,
-              color: Colors.amber,
+          if (widget.label.isNotEmpty) getLabel(),
+          Container(
+            height: 20.0,
+            child: RatingBar.builder(
+              initialRating: selectedValue,
+              minRating: 1,
+              direction: Axis.horizontal,
+              allowHalfRating: true,
+              itemCount: 5,
+              itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
+              itemSize: widget.itemSize ?? 28.0,
+              itemBuilder: (context, _) => Icon(
+                Icons.star,
+                color: Colors.amber,
+              ),
+              onRatingUpdate: (rating) {
+                setValue(rating);
+              },
             ),
-            onRatingUpdate: (rating) {
-              setValue(rating);
-            },
           )
         ],
       ),

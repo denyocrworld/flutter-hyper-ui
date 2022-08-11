@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class ExSlider extends StatefulWidget {
   final double? height;
-  final List<String> items;
+  final List<Map> items;
   final bool showIndicator;
   final bool autoPlay;
   final List<Widget> children;
@@ -27,17 +27,21 @@ class _ExSliderState extends State<ExSlider> {
 
   List<Widget> getImageSliders() {
     return widget.items
-        .map((item) => Container(
+        .map((item) => InkWell(
+              onTap: () => item["onTap"](item),
               child: Container(
-                margin: EdgeInsets.all(5.0),
-                child: ClipRRect(
-                    borderRadius: BorderRadius.all(Radius.circular(5.0)),
-                    child: Stack(
-                      children: <Widget>[
-                        Image.network(item, fit: BoxFit.cover, width: 1000.0),
-                        ...widget.children,
-                      ],
-                    )),
+                child: Container(
+                  margin: EdgeInsets.all(5.0),
+                  child: ClipRRect(
+                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                      child: Stack(
+                        children: <Widget>[
+                          Image.network(item["photo"],
+                              fit: BoxFit.cover, width: 1000.0),
+                          ...widget.children,
+                        ],
+                      )),
+                ),
               ),
             ))
         .toList();
