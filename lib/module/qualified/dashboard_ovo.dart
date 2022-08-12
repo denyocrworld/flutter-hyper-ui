@@ -52,7 +52,6 @@ class DashboardOvoView extends StatelessWidget {
       },
     ];
 
-    //TODO: Move this to your service or controller
     List carousel = [
       'https://capekngoding.com/uploads/62f5f13e35d3f_promo-1.jpg',
       'https://capekngoding.com/uploads/62f5f13ed034c_promo-2.jpg',

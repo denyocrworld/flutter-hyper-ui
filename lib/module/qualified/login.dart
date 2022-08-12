@@ -149,7 +149,6 @@ class LoginView extends StatelessWidget {
                                       ),
                                       GestureDetector(
                                         onTap: () {
-                                          //TODO: Navigate to Signup
                                           Navigator.push(
                                             context,
                                             MaterialPageRoute(
@@ -274,7 +273,6 @@ class MobileLoginScreen extends StatelessWidget {
                         ),
                         GestureDetector(
                           onTap: () {
-                            //TODO: Navigate to Signup
                             Navigator.push(
                               context,
                               MaterialPageRoute(

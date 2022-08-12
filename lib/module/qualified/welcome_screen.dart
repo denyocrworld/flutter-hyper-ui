@@ -92,7 +92,6 @@ class WelcomeScreen extends StatelessWidget {
                                     tag: "login_btn",
                                     child: ElevatedButton(
                                       onPressed: () {
-                                        //TODO: Navigate to Login
                                         Navigator.push(
                                           context,
                                           MaterialPageRoute(
@@ -110,7 +109,6 @@ class WelcomeScreen extends StatelessWidget {
                                   const SizedBox(height: 16),
                                   ElevatedButton(
                                     onPressed: () {
-                                      //TODO: Navigate to Signup
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(

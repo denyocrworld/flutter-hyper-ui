@@ -132,7 +132,6 @@ class SignUpView extends StatelessWidget {
                                       ),
                                       GestureDetector(
                                         onTap: () {
-                                          //TODO: Navigate to Signup
                                           Navigator.push(
                                             context,
                                             MaterialPageRoute(
