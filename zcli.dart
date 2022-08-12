@@ -1,6 +1,6 @@
 import 'dart:io';
 
-void main() {
+void main(args) {
   var dir = Directory("./lib");
   var dirs = dir.listSync(
     recursive: true,
@@ -70,11 +70,13 @@ void main() {
 }
 """);
 
-  var output2 = File(
-      r"C:\Users\denyo\Documents\FLUTTER_PROJECT\flutter-hyper-extension-vscode\snippets\view_template.json");
-  output2.writeAsStringSync("""
+  if (File("c:/yo/owner.txt").existsSync()) {
+    var output2 = File(
+        r"C:\Users\denyo\Documents\FLUTTER_PROJECT\flutter-hyper-extension-vscode\snippets\view_template.json");
+    output2.writeAsStringSync("""
 {
   ${codes.join(",\n")}
 }
 """);
+  }
 }
