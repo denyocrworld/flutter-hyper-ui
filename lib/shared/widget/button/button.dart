@@ -92,7 +92,7 @@ class ExButton extends StatelessWidget {
         child: Container(
           width: getWidth(),
           margin: margin ??
-              EdgeInsets.only(
+              const EdgeInsets.only(
                 left: 10.0,
                 right: 10.0,
                 bottom: 10.0,
@@ -132,7 +132,7 @@ class ExButton extends StatelessWidget {
                         size: 28,
                       ),
                     if (icon != null && label != null)
-                      SizedBox(
+                      const SizedBox(
                         width: 6.0,
                       ),
                     if (label != null)

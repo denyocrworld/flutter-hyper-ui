@@ -25,7 +25,7 @@ class _MapViewerState extends State<MapViewer> {
           urlTemplate: "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
           subdomains: ['a', 'b', 'c'],
           attributionBuilder: (_) {
-            return Text("© OpenStreetMap contributors");
+            return const Text("© OpenStreetMap contributors");
           },
         ),
         MarkerLayerOptions(

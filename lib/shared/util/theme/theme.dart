@@ -17,13 +17,13 @@ var defaultTheme = ThemeData(
   appBarTheme: AppBarTheme(
     elevation: 0.0,
     backgroundColor: primaryColor,
-    titleTextStyle: TextStyle(
+    titleTextStyle: const TextStyle(
       color: Colors.white,
     ),
-    actionsIconTheme: IconThemeData(
+    actionsIconTheme: const IconThemeData(
       color: Colors.white,
     ),
-    iconTheme: IconThemeData(
+    iconTheme: const IconThemeData(
       color: Colors.white,
     ),
   ),

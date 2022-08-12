@@ -9,12 +9,12 @@ class FlutterHyperUiKitDemoView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Demo"),
+        title: const Text("Demo"),
       ),
       body: SingleChildScrollView(
         controller: ScrollController(),
         child: Padding(
-          padding: EdgeInsets.all(20.0),
+          padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
               ExSearchField(
@@ -43,6 +43,7 @@ class FlutterHyperUiKitDemoView extends StatelessWidget {
                   {
                     "photo":
                         'https://images.unsplash.com/photo-1523205771623-e0faa4d2813d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=89719a0d55dd05e2deae4120227e6efc&auto=format&fit=crop&w=1953&q=80',
+                    "onTap": () {}
                   },
                   {
                     "photo":
@@ -55,7 +56,7 @@ class FlutterHyperUiKitDemoView extends StatelessWidget {
                     "onTap": () {}
                   },
                 ],
-                children: [
+                children: const [
                   Positioned(
                     right: 10.0,
                     bottom: 10.0,
@@ -78,7 +79,7 @@ class FlutterHyperUiKitDemoView extends StatelessWidget {
                       margin: const EdgeInsets.only(right: 10.0),
                       decoration: BoxDecoration(
                         color: Colors.blue[900 - (index * 100)],
-                        borderRadius: BorderRadius.all(
+                        borderRadius: const BorderRadius.all(
                           Radius.circular(
                             16.0,
                           ),

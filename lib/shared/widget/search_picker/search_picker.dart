@@ -103,8 +103,8 @@ class ExSearchPickerState extends State<ExSearchPicker>
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10.0),
-      decoration: BoxDecoration(
+      padding: const EdgeInsets.all(10.0),
+      decoration: const BoxDecoration(
           // color: Colors.white,
           ),
       child: Column(
@@ -113,7 +113,7 @@ class ExSearchPickerState extends State<ExSearchPicker>
         children: [
           if (widget.label != null) ...[
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 left: 4.0,
                 right: 4.0,
                 top: 4.0,
@@ -121,7 +121,7 @@ class ExSearchPickerState extends State<ExSearchPicker>
               ),
               child: Text(widget.label!),
             ),
-            SizedBox(
+            const SizedBox(
               height: 4.0,
             ),
           ],
@@ -131,13 +131,13 @@ class ExSearchPickerState extends State<ExSearchPicker>
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
-                  padding: EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.all(10.0),
                   decoration: BoxDecoration(
                     border: Border.all(
                       width: 1.0,
                       color: Colors.grey[300]!,
                     ),
-                    borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                    borderRadius: const BorderRadius.all(Radius.circular(4.0)),
                   ),
                   child: Row(
                     children: [
@@ -171,7 +171,7 @@ class ExSearchPickerState extends State<ExSearchPicker>
                       ),
                       InkWell(
                         onTap: () => searchSearch(),
-                        child: Icon(Icons.search),
+                        child: const Icon(Icons.search),
                       ),
                     ],
                   ),
@@ -232,20 +232,20 @@ class _SearchPickerSearchListState extends State<SearchPickerSearchList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Search Search"),
+        title: const Text("Search Search"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(
           children: [
             Container(
-              padding: EdgeInsets.all(6.0),
-              decoration: BoxDecoration(
+              padding: const EdgeInsets.all(6.0),
+              decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.all(Radius.circular(12.0)),
               ),
               child: TextField(
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   border: InputBorder.none,
                   hintText: "Search by Nama Search",
                   prefixIcon: Icon(
@@ -264,14 +264,14 @@ class _SearchPickerSearchListState extends State<SearchPickerSearchList> {
                   search = "";
                   setState(() {});
 
-                  await Future.delayed(Duration(milliseconds: 100));
+                  await Future.delayed(const Duration(milliseconds: 100));
 
                   search = value;
                   setState(() {});
                 },
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
             Expanded(

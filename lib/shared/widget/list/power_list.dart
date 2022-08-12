@@ -62,7 +62,7 @@ class PowerListState extends State<PowerList> {
     items.clear();
     setState(() {});
     print("ITEMS CLEAR!");
-    await Future.delayed(Duration(milliseconds: 100));
+    await Future.delayed(const Duration(milliseconds: 100));
 
     print("_onLoading...");
     // monitor network fetch
@@ -86,7 +86,7 @@ class PowerListState extends State<PowerList> {
     bottomLoading = true;
     setState(() {});
     print("ITEMS CLEAR!");
-    await Future.delayed(Duration(milliseconds: 100));
+    await Future.delayed(const Duration(milliseconds: 100));
 
     print("_onLoading...");
     // monitor network fetch
@@ -109,7 +109,7 @@ class PowerListState extends State<PowerList> {
   @override
   void initState() {
     super.initState();
-    id = widget.id ?? Uuid().v4();
+    id = widget.id ?? const Uuid().v4();
     PowerList.instance[id] = this;
     onLoading();
   }
@@ -129,13 +129,11 @@ class PowerListState extends State<PowerList> {
 
   @override
   Widget build(BuildContext context) {
-    if (loading)
-      return Container(
-        child: Center(
-          child: CircularProgressIndicator(),
-        ),
+    if (loading) {
+      return const Center(
+        child: CircularProgressIndicator(),
       );
-
+    }
     if (widget.wrapMode) {
       return Wrap(
         children: List.generate(

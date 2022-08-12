@@ -29,11 +29,12 @@ class _ExSliderState extends State<ExSlider> {
     return widget.items
         .map((item) => InkWell(
               onTap: () => item["onTap"](item),
-              child: Container(
+              child: SizedBox(
                 child: Container(
-                  margin: EdgeInsets.all(5.0),
+                  margin: const EdgeInsets.all(5.0),
                   child: ClipRRect(
-                      borderRadius: BorderRadius.all(Radius.circular(5.0)),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(5.0)),
                       child: Stack(
                         children: <Widget>[
                           Image.network(item["photo"],
@@ -57,7 +58,7 @@ class _ExSliderState extends State<ExSlider> {
           child: Container(
             width: 12.0,
             height: 12.0,
-            margin: EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
+            margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
             decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 color: (Theme.of(context).brightness == Brightness.dark

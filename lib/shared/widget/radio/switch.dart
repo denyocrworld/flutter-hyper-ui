@@ -44,7 +44,7 @@ class _ExSwitchState extends State<ExSwitch> implements InputControlState {
   Widget build(BuildContext context) {
     return Container(
       child: Container(
-        padding: EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10.0),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,

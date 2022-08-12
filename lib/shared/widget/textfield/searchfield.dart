@@ -67,7 +67,7 @@ class _ExSearchFieldState extends State<ExSearchField>
 
     return Container(
       height: widget.size ?? 50.0,
-      padding: EdgeInsets.only(
+      padding: const EdgeInsets.only(
         left: 8.0,
         right: 8.0,
       ),
@@ -77,7 +77,7 @@ class _ExSearchFieldState extends State<ExSearchField>
           width: 1.0,
           color: widget.borderColor ?? Colors.grey[200]!,
         ),
-        borderRadius: BorderRadius.all(
+        borderRadius: const BorderRadius.all(
           Radius.circular(16.0),
         ),
       ),
@@ -89,7 +89,7 @@ class _ExSearchFieldState extends State<ExSearchField>
         readOnly: widget.enabled! ? false : true,
         decoration: InputDecoration(
           hintText: widget.hintText,
-          icon: Icon(Icons.search),
+          icon: const Icon(Icons.search),
           border: InputBorder.none,
         ),
         onChanged: (text) {

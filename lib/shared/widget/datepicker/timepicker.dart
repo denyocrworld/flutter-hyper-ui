@@ -58,13 +58,13 @@ class ExTimePickerState extends State<ExTimePicker>
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10.0),
+      padding: const EdgeInsets.all(10.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               left: 4.0,
               right: 4.0,
               top: 4.0,
@@ -93,18 +93,18 @@ class ExTimePickerState extends State<ExTimePicker>
             },
             child: Container(
               height: 38.0,
-              padding: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
               decoration: BoxDecoration(
                 border: Border.all(
                   width: 1.0,
                   color: Colors.grey[300]!,
                 ),
-                borderRadius: BorderRadius.all(Radius.circular(4.0)),
+                borderRadius: const BorderRadius.all(Radius.circular(4.0)),
               ),
               child: Row(
                 children: [
                   Text("$formattedValue"),
-                  Spacer(),
+                  const Spacer(),
                   Icon(
                     Icons.calendar_view_month,
                     color: Colors.grey[500],

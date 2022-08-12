@@ -5,7 +5,6 @@ import 'package:flutter_hyper_ui/module//qualified/dashboard_grocery.dart';
 import 'package:flutter_hyper_ui/module//qualified/dashboard_ovo.dart';
 import 'package:flutter_hyper_ui/module//qualified/dashboard_travel.dart';
 import 'package:flutter_hyper_ui/module//qualified/login.dart';
-import 'package:flutter_hyper_ui/module//qualified/navigation_gojek.dart';
 import 'package:flutter_hyper_ui/module//qualified/profile_basic.dart';
 import 'package:flutter_hyper_ui/module//qualified/sign_up.dart';
 import 'package:flutter_hyper_ui/module//qualified/welcome_screen.dart';
@@ -75,11 +74,6 @@ class HomeView extends StatelessWidget {
       },
       {
         "category": "Navigation",
-      },
-      {
-        "icon": Icons.developer_board,
-        "name": "Navigation Gojek",
-        "page": GojekMainNavigationView(),
       },
     ];
     return Scaffold(

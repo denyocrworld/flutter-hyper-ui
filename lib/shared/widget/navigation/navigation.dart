@@ -57,13 +57,13 @@ class _ExNavigationState extends State<ExNavigation> {
     if (widget.type == NavigationType.float) {
       return Container(
         color: Colors.transparent,
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Card(
           elevation: 2.0,
           child: Container(
             height: 60.0,
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(
                 Radius.circular(12.0),
               ),
@@ -82,7 +82,7 @@ class _ExNavigationState extends State<ExNavigation> {
                         setState(() {});
                       },
                       child: AnimatedContainer(
-                        duration: Duration(seconds: 2),
+                        duration: const Duration(seconds: 2),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -94,7 +94,7 @@ class _ExNavigationState extends State<ExNavigation> {
                                   : unselectedColor,
                               size: selectedIndex == index ? 20.0 : 16.0,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 4.0,
                             ),
                             Text(
@@ -122,13 +122,13 @@ class _ExNavigationState extends State<ExNavigation> {
     if (widget.type == NavigationType.aoashi) {
       return Container(
         color: Colors.transparent,
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Card(
           elevation: 2.0,
           child: Container(
             height: 60.0,
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               borderRadius: BorderRadius.all(
                 Radius.circular(12.0),
               ),
@@ -162,7 +162,7 @@ class _ExNavigationState extends State<ExNavigation> {
                                         : primaryColor!.withOpacity(0.4),
                                     size: selectedIndex == index ? 20.0 : 16.0,
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 4.0,
                                   ),
                                   Text(
@@ -187,10 +187,11 @@ class _ExNavigationState extends State<ExNavigation> {
                                       height:
                                           selectedIndex == index ? 10.0 : 0.0,
                                       width: 30.0,
-                                      duration: Duration(milliseconds: 200),
+                                      duration:
+                                          const Duration(milliseconds: 200),
                                       decoration: BoxDecoration(
                                         color: primaryColor,
-                                        borderRadius: BorderRadius.only(
+                                        borderRadius: const BorderRadius.only(
                                           bottomLeft: Radius.circular(20.0),
                                           bottomRight: Radius.circular(20.0),
                                         ),
@@ -198,7 +199,7 @@ class _ExNavigationState extends State<ExNavigation> {
                                       child: SingleChildScrollView(
                                         controller: ScrollController(),
                                         child: Column(
-                                          children: [
+                                          children: const [
                                             CircleAvatar(
                                               backgroundColor: Colors.white,
                                               radius: 4.0,
@@ -226,13 +227,13 @@ class _ExNavigationState extends State<ExNavigation> {
 
     if (widget.type == NavigationType.basicWithDockedFloating) {
       return BottomAppBar(
-        shape: CircularNotchedRectangle(),
-        child: Container(
+        shape: const CircularNotchedRectangle(),
+        child: SizedBox(
           height: 56,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              SizedBox(
+              const SizedBox(
                 width: 10.0,
               ),
               ...List.generate(
@@ -245,7 +246,7 @@ class _ExNavigationState extends State<ExNavigation> {
                   );
                 },
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10.0,
               ),
             ],
@@ -256,7 +257,7 @@ class _ExNavigationState extends State<ExNavigation> {
 
     if (widget.type == NavigationType.appbar) {
       return Container(
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           left: 20.0,
           right: 20.0,
         ),
@@ -283,7 +284,7 @@ class _ExNavigationState extends State<ExNavigation> {
                                 ? primaryColor
                                 : disabledColor,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 6.0,
                           ),
                           Text(
@@ -297,7 +298,7 @@ class _ExNavigationState extends State<ExNavigation> {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10.0,
                       ),
                       if (selectedIndex == index)
@@ -306,7 +307,7 @@ class _ExNavigationState extends State<ExNavigation> {
                           width: MediaQuery.of(context).size.width / 4,
                           decoration: BoxDecoration(
                             color: primaryColor,
-                            borderRadius: BorderRadius.all(
+                            borderRadius: const BorderRadius.all(
                               Radius.circular(
                                 16.0,
                               ),
@@ -354,7 +355,7 @@ class _ExNavigationState extends State<ExNavigation> {
           Container(
             child: getNavigation(),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10.0,
           ),
           Expanded(

@@ -56,14 +56,14 @@ class _ExCheckBoxState extends State<ExCheckBox> implements InputControlState {
   Widget build(BuildContext context) {
     return Container(
       child: Container(
-        padding: EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             if (widget.label!.isNotEmpty) ...[
               Padding(
-                padding: EdgeInsets.only(
+                padding: const EdgeInsets.only(
                   left: 4.0,
                   right: 4.0,
                   top: 4.0,
@@ -71,7 +71,7 @@ class _ExCheckBoxState extends State<ExCheckBox> implements InputControlState {
                 ),
                 child: Text("${widget.label}"),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 6.0,
               ),
             ],
@@ -82,7 +82,7 @@ class _ExCheckBoxState extends State<ExCheckBox> implements InputControlState {
                     selectedValues.contains(item["value"]) ? true : false;
 
                 return Container(
-                  padding: EdgeInsets.only(
+                  padding: const EdgeInsets.only(
                     left: 10.0,
                     right: 10.0,
                     top: 2.0,

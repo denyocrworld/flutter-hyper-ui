@@ -8,6 +8,6 @@ void main() async {
   return runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     theme: defaultTheme,
-    home: FlutterHyperUiKitDemoView(),
+    home: const FlutterHyperUiKitDemoView(),
   ));
 }

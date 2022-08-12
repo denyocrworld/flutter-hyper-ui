@@ -167,21 +167,21 @@ class ExComboState extends State<ExCombo> implements InputControlState {
     }
 
     if (comboItems.isEmpty) {
-      return Text("Loading...");
+      return const Text("Loading...");
     }
 
     if (widget.items.isEmpty) {
-      return Text("Loading...");
+      return const Text("Loading...");
     }
 
     if (widget.items.isEmpty) {
-      return Text("Loading...");
+      return const Text("Loading...");
     }
     var dropDownButton = DropdownButton<String>(
       isExpanded: true,
       value: selectedValue,
       icon: Padding(
-        padding: EdgeInsets.all(0.0),
+        padding: const EdgeInsets.all(0.0),
         child: Icon(
           Icons.arrow_downward,
           size: 16.0,
@@ -228,7 +228,7 @@ class ExComboState extends State<ExCombo> implements InputControlState {
 
     getLabel() {
       return Container(
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           left: 4.0,
           right: 4.0,
           top: 4.0,
@@ -244,12 +244,12 @@ class ExComboState extends State<ExCombo> implements InputControlState {
     getDropDown() {
       return Container(
         height: 42.0,
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           left: 8.0,
           right: 8.0,
         ),
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(4.0)),
+          borderRadius: const BorderRadius.all(Radius.circular(4.0)),
           border: Border.all(color: Colors.grey[300]!),
         ),
         // child: DropdownButtonHideUnderline(
@@ -260,7 +260,7 @@ class ExComboState extends State<ExCombo> implements InputControlState {
     }
 
     return Container(
-      padding: EdgeInsets.all(10.0),
+      padding: const EdgeInsets.all(10.0),
       width: MediaQuery.of(context).size.width,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

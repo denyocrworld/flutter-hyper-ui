@@ -58,7 +58,6 @@ void main() {
         }
       }
 
-      print(path.toString());
       File(path.toString()).writeAsStringSync(lines.join("\n"));
     }
     if (file is Directory) {}

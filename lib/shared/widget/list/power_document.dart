@@ -43,7 +43,7 @@ class PowerDocumentState extends State<PowerDocument> {
     loading = true;
     setState(() {});
     print("ITEMS CLEAR!");
-    await Future.delayed(Duration(milliseconds: 100));
+    await Future.delayed(const Duration(milliseconds: 100));
 
     print("_onLoading...");
     // monitor network fetch
@@ -76,12 +76,11 @@ class PowerDocumentState extends State<PowerDocument> {
 
   @override
   Widget build(BuildContext context) {
-    if (loading)
-      return Container(
-        child: Center(
-          child: CircularProgressIndicator(),
-        ),
+    if (loading) {
+      return const Center(
+        child: CircularProgressIndicator(),
       );
+    }
 
     return Builder(
       builder: (context) {

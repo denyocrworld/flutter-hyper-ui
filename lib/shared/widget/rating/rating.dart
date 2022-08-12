@@ -80,7 +80,7 @@ class ExRatingState extends State<ExRating> implements InputControlState {
 
     getLabel() {
       return Container(
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           left: 4.0,
           right: 4.0,
           top: 4.0,
@@ -100,7 +100,7 @@ class ExRatingState extends State<ExRating> implements InputControlState {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           if (widget.label.isNotEmpty) getLabel(),
-          Container(
+          SizedBox(
             height: 20.0,
             child: RatingBar.builder(
               initialRating: selectedValue,
@@ -108,9 +108,8 @@ class ExRatingState extends State<ExRating> implements InputControlState {
               direction: Axis.horizontal,
               allowHalfRating: true,
               itemCount: 5,
-              itemPadding: EdgeInsets.symmetric(horizontal: 4.0),
               itemSize: widget.itemSize ?? 28.0,
-              itemBuilder: (context, _) => Icon(
+              itemBuilder: (context, _) => const Icon(
                 Icons.star,
                 color: Colors.amber,
               ),

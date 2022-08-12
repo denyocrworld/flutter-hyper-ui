@@ -44,8 +44,8 @@ class _ExLocationPickerState extends State<ExLocationPicker> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 6.0, bottom: 4.0),
-      padding: EdgeInsets.all(10.0),
+      margin: const EdgeInsets.only(top: 6.0, bottom: 4.0),
+      padding: const EdgeInsets.all(10.0),
       width: MediaQuery.of(context).size.width,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -58,10 +58,10 @@ class _ExLocationPickerState extends State<ExLocationPicker> {
             ),
             child: Text(
               (widget.label ?? "Select Location"),
-              style: TextStyle(),
+              style: const TextStyle(),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 4.0,
           ),
           if (!isLocationPicked())

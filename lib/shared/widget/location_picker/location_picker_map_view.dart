@@ -164,8 +164,8 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Container(
+                    children: const <Widget>[
+                      SizedBox(
                         child: Text("Updating Location..."),
                       ),
                     ],
@@ -184,7 +184,7 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                   children: [
                     Container(
                       color: Colors.white,
-                      padding: EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(8.0),
                       width: MediaQuery.of(context).size.width,
                       height: 54.0,
                       child: Row(
@@ -194,21 +194,21 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                               Navigator.pop(context);
                             },
                             child: Container(
-                              padding: EdgeInsets.all(4.0),
+                              padding: const EdgeInsets.all(4.0),
                               child: Icon(
                                 Icons.arrow_back,
                                 color: Colors.grey[800],
                               ),
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10.0,
                           ),
                           Expanded(
                             child: TextField(
                               enabled: loading ? false : true,
                               controller: searchController,
-                              decoration: InputDecoration.collapsed(
+                              decoration: const InputDecoration.collapsed(
                                 hintText: "Search",
                               ),
                               style: TextStyle(
@@ -220,7 +220,7 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                                 var currentTryCode = tryCode;
 
                                 Future.delayed(
-                                  Duration(milliseconds: 700),
+                                  const Duration(milliseconds: 700),
                                   () {
                                     if (tryCode == currentTryCode) {
                                       nominatimSearch(text);
@@ -232,7 +232,7 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                               },
                             ),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10.0,
                           ),
                           InkWell(
@@ -240,8 +240,8 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                               searchController.text = "";
                             },
                             child: Container(
-                              padding: EdgeInsets.all(8.0),
-                              child: Icon(
+                              padding: const EdgeInsets.all(8.0),
+                              child: const Icon(
                                 Icons.close,
                                 color: Colors.red,
                               ),
@@ -280,7 +280,8 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                                       "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                                   subdomains: ['a', 'b', 'c'],
                                   attributionBuilder: (_) {
-                                    return Text("© OpenStreetMap contributors");
+                                    return const Text(
+                                        "© OpenStreetMap contributors");
                                   },
                                 ),
                                 MarkerLayerOptions(
@@ -318,7 +319,7 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                     ),
                     Container(
                       color: Colors.white,
-                      padding: EdgeInsets.all(6.0),
+                      padding: const EdgeInsets.all(6.0),
                       width: MediaQuery.of(context).size.width,
                       child: ExButton(
                         label: "Select Location",
@@ -352,7 +353,7 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                             Container(
                               width: MediaQuery.of(context).size.width,
                               color: Colors.white,
-                              padding: EdgeInsets.only(
+                              padding: const EdgeInsets.only(
                                 left: 16.0,
                                 right: 16.0,
                                 top: 8.0,
@@ -404,7 +405,7 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                                   },
                                   child: Container(
                                     width: MediaQuery.of(context).size.width,
-                                    padding: EdgeInsets.only(
+                                    padding: const EdgeInsets.only(
                                       left: 16.0,
                                       right: 16.0,
                                       top: 8.0,

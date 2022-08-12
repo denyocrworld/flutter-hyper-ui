@@ -152,7 +152,7 @@ class ExColorPickerState extends State<ExColorPicker>
 
     getLabel() {
       return Container(
-        padding: EdgeInsets.only(
+        padding: const EdgeInsets.only(
           left: 4.0,
           right: 4.0,
           top: 4.0,
@@ -166,7 +166,7 @@ class ExColorPickerState extends State<ExColorPicker>
     }
 
     return Container(
-      padding: EdgeInsets.all(10.0),
+      padding: const EdgeInsets.all(10.0),
       width: MediaQuery.of(context).size.width,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -182,14 +182,14 @@ class ExColorPickerState extends State<ExColorPicker>
                       // setValue(color);
                     },
                     child: Container(
-                      margin: EdgeInsets.only(right: 8.0),
+                      margin: const EdgeInsets.only(right: 8.0),
                       child: CircleAvatar(
                         backgroundColor: Colors.grey[300],
                         child: Padding(
                           padding: const EdgeInsets.all(4.0),
                           child: CircleAvatar(
                             backgroundColor: selectedValue,
-                            child: Icon(
+                            child: const Icon(
                               Icons.check,
                               color: Colors.white,
                               size: 14.0,
@@ -212,7 +212,7 @@ class ExColorPickerState extends State<ExColorPicker>
                           setValue(color);
                         },
                         child: Container(
-                          margin: EdgeInsets.only(right: 8.0),
+                          margin: const EdgeInsets.only(right: 8.0),
                           child: CircleAvatar(
                             backgroundColor:
                                 selected ? Colors.grey[300] : Colors.grey[300],
@@ -222,7 +222,7 @@ class ExColorPickerState extends State<ExColorPicker>
                                 backgroundColor: color,
                                 child: !selected
                                     ? Container()
-                                    : Icon(
+                                    : const Icon(
                                         Icons.check,
                                         color: Colors.white,
                                         size: 14.0,
@@ -241,7 +241,7 @@ class ExColorPickerState extends State<ExColorPicker>
                       showColor();
                     },
                     child: Container(
-                      margin: EdgeInsets.only(right: 8.0),
+                      margin: const EdgeInsets.only(right: 8.0),
                       child: CircleAvatar(
                         backgroundColor: Colors.grey[300],
                         child: Padding(
@@ -251,7 +251,7 @@ class ExColorPickerState extends State<ExColorPicker>
                                 selectedValue == null || customColor == false
                                     ? Colors.blueGrey[300]
                                     : selectedValue,
-                            child: Icon(
+                            child: const Icon(
                               Icons.tune,
                               color: Colors.white,
                               size: 14.0,

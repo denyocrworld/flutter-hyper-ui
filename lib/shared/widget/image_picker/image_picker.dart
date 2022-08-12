@@ -118,7 +118,7 @@ class _ExImagePickerState extends State<ExImagePicker>
           setState(() {});
 
           var file = filePickerResult!.files[0];
-          var filename = Uuid().v1() + "_" + path.basename(file.name);
+          var filename = const Uuid().v1() + "_" + path.basename(file.name);
           //Compress Image
           Directory tempDir = await getTemporaryDirectory();
           String tempPath = tempDir.path;
@@ -162,13 +162,13 @@ class _ExImagePickerState extends State<ExImagePicker>
       },
       child: Container(
         width: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 left: 4.0,
                 right: 4.0,
                 top: 4.0,
@@ -176,7 +176,7 @@ class _ExImagePickerState extends State<ExImagePicker>
               ),
               child: Text(widget.label),
             ),
-            SizedBox(
+            const SizedBox(
               height: 4.0,
             ),
             if (loading) ...[
@@ -184,7 +184,7 @@ class _ExImagePickerState extends State<ExImagePicker>
                 height: 120.0,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(
+                  borderRadius: const BorderRadius.all(
                     Radius.circular(12.0),
                   ),
                   color: Colors.grey[300],
@@ -195,7 +195,7 @@ class _ExImagePickerState extends State<ExImagePicker>
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       ImageIcon(
-                        NetworkImage(
+                        const NetworkImage(
                           "https://cdn-icons-png.flaticon.com/128/159/159626.png",
                         ),
                         color: Colors.grey[600],
@@ -222,7 +222,7 @@ class _ExImagePickerState extends State<ExImagePicker>
                   width: MediaQuery.of(context).size.width,
                   padding: const EdgeInsets.all(10.0),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(12.0),
                     ),
                     color: Colors.grey[300],
@@ -239,7 +239,7 @@ class _ExImagePickerState extends State<ExImagePicker>
                             ),
                             fit: BoxFit.cover,
                           ),
-                          borderRadius: BorderRadius.all(
+                          borderRadius: const BorderRadius.all(
                             Radius.circular(
                               16.0,
                             ),
@@ -254,7 +254,7 @@ class _ExImagePickerState extends State<ExImagePicker>
                   height: 120.0,
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(
+                    borderRadius: const BorderRadius.all(
                       Radius.circular(12.0),
                     ),
                     color: Colors.grey[300],
@@ -265,7 +265,7 @@ class _ExImagePickerState extends State<ExImagePicker>
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         ImageIcon(
-                          NetworkImage(
+                          const NetworkImage(
                             "https://cdn-icons-png.flaticon.com/128/159/159626.png",
                           ),
                           color: Colors.grey[600],
@@ -273,7 +273,7 @@ class _ExImagePickerState extends State<ExImagePicker>
                         const SizedBox(
                           height: 6.0,
                         ),
-                        Text("Upload"),
+                        const Text("Upload"),
                       ],
                     ),
                   ),

@@ -39,7 +39,6 @@ Future removeUnusedPackages() async {
   for (var i = 0; i < pubspecPackages.length; i++) {
     var p = pubspecPackages[i];
     if (usedPackages.contains(p) == false) {
-      print("This packages is not used $p");
       unusedPackages.add(p);
     }
   }

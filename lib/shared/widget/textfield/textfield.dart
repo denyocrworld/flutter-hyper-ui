@@ -77,8 +77,8 @@ class _ExTextFieldState extends State<ExTextField>
 
     return Container(
       height: height,
-      padding: EdgeInsets.all(10.0),
-      decoration: BoxDecoration(
+      padding: const EdgeInsets.all(10.0),
+      decoration: const BoxDecoration(
           // color: Colors.white,
           ),
       child: Column(
@@ -87,7 +87,7 @@ class _ExTextFieldState extends State<ExTextField>
         children: [
           if (widget.label != null) ...[
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                 left: 4.0,
                 right: 4.0,
                 top: 4.0,
@@ -97,19 +97,19 @@ class _ExTextFieldState extends State<ExTextField>
                 widget.label!,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 4.0,
             ),
           ],
           Expanded(
             child: Container(
-              padding: EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(10.0),
               decoration: BoxDecoration(
                 border: Border.all(
                   width: 1.0,
                   color: Colors.grey[300]!,
                 ),
-                borderRadius: BorderRadius.all(Radius.circular(8.0)),
+                borderRadius: const BorderRadius.all(Radius.circular(8.0)),
               ),
               child: TextField(
                 controller: controller,

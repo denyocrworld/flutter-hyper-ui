@@ -68,7 +68,7 @@ class _ExRadioState extends State<ExRadio> implements InputControlState {
   Widget build(BuildContext context) {
     return Container(
       child: Container(
-        padding: EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10.0),
         height: widget.label!.isNotEmpty ? 80.0 : 60.0,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,7 +76,7 @@ class _ExRadioState extends State<ExRadio> implements InputControlState {
           children: [
             if (widget.label!.isNotEmpty)
               Padding(
-                padding: EdgeInsets.only(
+                padding: const EdgeInsets.only(
                   left: 4.0,
                   right: 4.0,
                   top: 4.0,
@@ -105,13 +105,14 @@ class _ExRadioState extends State<ExRadio> implements InputControlState {
                         color: selected
                             ? Theme.of(context).primaryColor
                             : Colors.grey[300],
-                        borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(20.0)),
                       ),
-                      padding: EdgeInsets.only(
+                      padding: const EdgeInsets.only(
                         left: 20,
                         right: 20,
                       ),
-                      margin: EdgeInsets.only(right: 10.0),
+                      margin: const EdgeInsets.only(right: 10.0),
                       child: Center(
                           child: Text(
                         "${item["value"]}",

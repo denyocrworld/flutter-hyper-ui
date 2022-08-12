@@ -1,3 +1,5 @@
+/*
+//#TEMPLATE navigation_gojek
 // ------------------------
 // CapekNgoding.com
 // ------------------------
@@ -75,8 +77,10 @@ class _GojekMainNavigationViewState extends State<GojekMainNavigationView>
       initialIndex: activeTab,
     );
 
-    sliderTransformController =
-        AnimationController(duration: Duration(milliseconds: 150), vsync: this);
+    sliderTransformController = AnimationController(
+      duration: const Duration(milliseconds: 150),
+      vsync: this,
+    );
     sliderTransformAnimation =
         Tween(begin: 0.0, end: 130.0).animate(sliderTransformController);
   }
@@ -92,7 +96,7 @@ class _GojekMainNavigationViewState extends State<GojekMainNavigationView>
       child: LayoutBuilder(builder: (context, constrait) {
         maxScreenHeight = constrait.maxHeight;
         return AnnotatedRegion<SystemUiOverlayStyle>(
-          value: SystemUiOverlayStyle(
+          value: const SystemUiOverlayStyle(
             statusBarColor: Colors.transparent,
             statusBarBrightness: Brightness.light,
             statusBarIconBrightness: Brightness.light,
@@ -272,7 +276,7 @@ class _GojekMainNavigationViewState extends State<GojekMainNavigationView>
         child: Center(
           child: Container(
             height: 85,
-            padding: EdgeInsets.symmetric(horizontal: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 12),
             width: MediaQuery.of(context).size.width - 48 + marginFooter,
             child: Center(
               child: Row(
@@ -432,7 +436,7 @@ Widget slidingContent(ScrollController controller) {
         ),
         Expanded(
           child: ListView(
-            padding: EdgeInsets.symmetric(vertical: 0, horizontal: 20),
+            padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
             controller: controller,
             children: <Widget>[
               SizedBox(
@@ -446,7 +450,8 @@ Widget slidingContent(ScrollController controller) {
                   ),
                   Spacer(),
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(50),
                         border:
@@ -1052,7 +1057,7 @@ class HomeContent extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -1093,7 +1098,7 @@ class HomeContent extends StatelessWidget {
           ),
           Container(
             height: 230,
-            padding: EdgeInsets.symmetric(vertical: 10),
+            padding: const EdgeInsets.symmetric(vertical: 10),
             child: ListView.builder(
                 itemCount: 10,
                 shrinkWrap: true,
@@ -1121,7 +1126,7 @@ class HomeContent extends StatelessWidget {
                               height: 120,
                             ),
                             Container(
-                                padding: EdgeInsets.all(12),
+                                padding: const EdgeInsets.all(12),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisSize: MainAxisSize.min,
@@ -1173,7 +1178,7 @@ class HomeContent extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Text(
               'Top picks for you',
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900),
@@ -1183,7 +1188,7 @@ class HomeContent extends StatelessWidget {
             animation: selectedIndex,
             builder: (context, child) => Container(
               height: 30,
-              margin: EdgeInsets.only(top: 16),
+              margin: const EdgeInsets.only(top: 16),
               child: ListView.builder(
                 padding: EdgeInsets.zero,
                 itemCount: category.length,
@@ -1193,7 +1198,7 @@ class HomeContent extends StatelessWidget {
                   return GestureDetector(
                     onTap: () => selectedIndex.value = index,
                     child: Container(
-                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      padding: const EdgeInsets.symmetric(horizontal: 10),
                       margin:
                           EdgeInsets.only(left: index == 0 ? 20 : 4, right: 4),
                       decoration: BoxDecoration(
@@ -1276,7 +1281,7 @@ class HomeContent extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                  padding: EdgeInsets.all(3),
+                  padding: const EdgeInsets.all(3),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(8)),
@@ -1302,7 +1307,7 @@ class HomeContent extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                  padding: EdgeInsets.all(3),
+                  padding: const EdgeInsets.all(3),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(8)),
@@ -1328,7 +1333,7 @@ class HomeContent extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                  padding: EdgeInsets.all(3),
+                  padding: const EdgeInsets.all(3),
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(8)),
@@ -1377,7 +1382,7 @@ class HomeContent extends StatelessWidget {
       child: Container(
         margin: EdgeInsets.only(right: 20),
         height: 40,
-        padding: EdgeInsets.symmetric(horizontal: 8),
+        padding: const EdgeInsets.symmetric(horizontal: 8),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(50),
             color: Colors.grey.withOpacity(.05),
@@ -1425,7 +1430,7 @@ class ItemListIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 8),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -1470,7 +1475,7 @@ Widget gopayScrollContent({
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(8)),
       height: itemHeight,
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -1667,7 +1672,7 @@ class ScrollSnapListState extends State<ScrollSnapList> {
     });
 
     ///After initial jump, set isInit to false
-    Future.delayed(Duration(milliseconds: 10), () {
+    Future.delayed(const Duration(milliseconds: 10), () {
       if (this.mounted) {
         setState(() {
           isInit = false;
@@ -1678,7 +1683,7 @@ class ScrollSnapListState extends State<ScrollSnapList> {
 
   ///Scroll list to an offset
   void _animateScroll(double location) {
-    Future.delayed(Duration.zero, () {
+    Future.delayed(const Duration.zero, () {
       widget.listController.animateTo(
         location,
         duration: Duration(milliseconds: widget.duration),
@@ -2083,3 +2088,5 @@ class _BubblePainter extends BoxPainter {
   }
 }
 //EOL
+//#END
+*/
