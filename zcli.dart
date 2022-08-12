@@ -95,6 +95,8 @@ generateSnippet() async {
   ${codes.join(",\n")}
 }
 """);
+
+    print("Snippet is Generated!");
   }
 }
 
