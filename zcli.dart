@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 
 String command = "";
@@ -96,7 +97,7 @@ generateSnippet() async {
 }
 """);
 
-    print("Snippet is Generated!");
+    log("Snippet is Generated!");
   }
 }
 

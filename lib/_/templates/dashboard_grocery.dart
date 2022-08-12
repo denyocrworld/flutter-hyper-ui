@@ -24,7 +24,9 @@ class TemplateDashboardGroceryView extends StatelessWidget {
     ------------------------
     Code generation with snippets can be a good solution for you or it can kill you.
     A basic understanding of Dart and Flutter is required.
-    Keep it in mind, Our snippet can't generate many files yet. So, all of our snippets are put in one file which is not best practice.
+     Keep it in mind, Our snippet can't generate many files yet. 
+    So, all of our snippets are put in one file which is not best practice.
+    You need to do the optimization yourself, and at least you are familiar with using Flutter.
     ------------------------
     */
 
