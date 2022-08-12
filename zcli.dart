@@ -97,7 +97,8 @@ generateSnippet() async {
 }
 """);
 
-    log("Snippet is Generated!");
+    // ignore: avoid_print
+    print("Snippet is Generated!");
   }
 }
 
