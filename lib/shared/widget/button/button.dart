@@ -18,7 +18,8 @@ class ExButton extends StatelessWidget {
   final bool outline;
   final double? size;
 
-  ExButton({
+  const ExButton({
+    Key? key,
     required this.onPressed,
     this.label,
     this.color,
@@ -34,7 +35,7 @@ class ExButton extends StatelessWidget {
     this.enabled = true,
     this.outline = false,
     this.size,
-  });
+  }) : super(key: key);
 
   getColor(context) {
     if (outline) return Colors.white;

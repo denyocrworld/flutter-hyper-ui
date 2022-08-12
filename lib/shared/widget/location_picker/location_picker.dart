@@ -9,12 +9,13 @@ class ExLocationPicker extends StatefulWidget {
   final double? latitude;
   final double? longitude;
 
-  ExLocationPicker({
+  const ExLocationPicker({
+    Key? key,
     required this.id,
     this.label,
     this.latitude,
     this.longitude,
-  });
+  }) : super(key: key);
 
   @override
   _ExLocationPickerState createState() => _ExLocationPickerState();

@@ -4,6 +4,8 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 
 class MapViewer extends StatefulWidget {
+  const MapViewer({Key? key}) : super(key: key);
+
   @override
   _MapViewerState createState() => _MapViewerState();
 }

@@ -15,7 +15,8 @@ class ExSearchField extends StatefulWidget {
   final Function(String text)? onChanged;
   final Function(String text)? onSubmitted;
 
-  ExSearchField({
+  const ExSearchField({
+    Key? key,
     required this.id,
     required this.label,
     this.size,
@@ -28,7 +29,7 @@ class ExSearchField extends StatefulWidget {
     this.enabled = true,
     this.backgroundColor,
     this.borderColor,
-  });
+  }) : super(key: key);
 
   @override
   _ExSearchFieldState createState() => _ExSearchFieldState();

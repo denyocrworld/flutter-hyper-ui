@@ -9,13 +9,14 @@ class ExTimePicker extends StatefulWidget {
   final Function(TimeOfDay value)? onChanged;
   final String? format;
 
-  ExTimePicker({
+  const ExTimePicker({
+    Key? key,
     required this.id,
     this.label,
     this.value,
     this.onChanged,
     this.format = "h:mm a",
-  });
+  }) : super(key: key);
 
   @override
   ExTimePickerState createState() => ExTimePickerState();

@@ -21,7 +21,7 @@ class PowerList extends StatefulWidget {
   }
 
   final Function(int, Map) builder;
-  PowerList({
+  const PowerList({
     this.id,
     required this.builder,
     required this.futureBuilder,

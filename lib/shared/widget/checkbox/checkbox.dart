@@ -9,7 +9,7 @@ class ExCheckBox extends StatefulWidget {
   final Function(String)? onChanged;
   final TextInputType? keyboardType;
 
-  ExCheckBox({
+  const ExCheckBox({
     Key? key,
     required this.id,
     required this.items,
@@ -17,7 +17,7 @@ class ExCheckBox extends StatefulWidget {
     this.value,
     this.onChanged,
     this.keyboardType,
-  });
+  }) : super(key: key);
 
   @override
   _ExCheckBoxState createState() => _ExCheckBoxState();

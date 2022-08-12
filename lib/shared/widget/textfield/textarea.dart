@@ -7,7 +7,7 @@ class ExTextArea extends StatelessWidget {
   final int maxLines;
   final String? value;
 
-  ExTextArea({
+  const ExTextArea({
     Key? key,
     required this.id,
     required this.label,

@@ -21,7 +21,8 @@ class ExColorPicker extends StatefulWidget {
   final bool? disableTranslate;
   final bool? hideLabel;
 
-  ExColorPicker({
+  const ExColorPicker({
+    Key? key,
     required this.id,
     this.colorsList,
     this.label = "",
@@ -33,7 +34,7 @@ class ExColorPicker extends StatefulWidget {
     this.visibleIf,
     this.hideLabel = false,
     this.enableCustomColor = true,
-  });
+  }) : super(key: key);
 
   @override
   ExColorPickerState createState() => ExColorPickerState();

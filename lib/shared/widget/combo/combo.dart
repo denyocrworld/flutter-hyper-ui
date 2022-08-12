@@ -16,7 +16,8 @@ class ExCombo extends StatefulWidget {
   final bool? disableTranslate;
   final bool? hideLabel;
 
-  ExCombo({
+  const ExCombo({
+    Key? key,
     required this.id,
     required this.items,
     this.label = "",
@@ -27,7 +28,7 @@ class ExCombo extends StatefulWidget {
     this.disableTranslate = false,
     this.visibleIf,
     this.hideLabel = false,
-  });
+  }) : super(key: key);
 
   @override
   ExComboState createState() => ExComboState();

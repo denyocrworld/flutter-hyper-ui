@@ -9,14 +9,15 @@ class ExRadio extends StatefulWidget {
   final Function(String)? onChanged;
   final TextInputType? keyboardType;
 
-  ExRadio({
+  const ExRadio({
+    Key? key,
     required this.id,
     required this.items,
     this.label = "",
     this.value,
     this.onChanged,
     this.keyboardType,
-  });
+  }) : super(key: key);
 
   @override
   _ExRadioState createState() => _ExRadioState();

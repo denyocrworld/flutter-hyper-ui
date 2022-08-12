@@ -16,11 +16,12 @@ class ExLocationPickerMapView extends StatefulWidget {
   final double? latitude;
   final double? longitude;
 
-  ExLocationPickerMapView({
+  const ExLocationPickerMapView({
+    Key? key,
     required this.id,
     this.latitude,
     this.longitude,
-  });
+  }) : super(key: key);
 
   @override
   _ExLocationPickerMapViewState createState() =>
@@ -45,13 +46,14 @@ class LocationPickerMap extends StatefulWidget {
   final double zoom;
   final bool enableMyLocationFeature;
 
-  LocationPickerMap({
+  const LocationPickerMap({
+    Key? key,
     required this.id,
     this.latitude,
     this.longitude,
     this.zoom = 16,
     this.enableMyLocationFeature = true,
-  });
+  }) : super(key: key);
 
   @override
   LocationPickerMapState createState() => LocationPickerMapState();
@@ -138,7 +140,7 @@ class LocationPickerMapState extends State<LocationPickerMap> {
     return Scaffold(
       body: Stack(
         children: [
-          Positioned(
+          const Positioned(
             left: -1000,
             top: -1000,
             child: SizedBox(

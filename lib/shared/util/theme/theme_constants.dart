@@ -15,7 +15,6 @@ var disabledTextColor = Colors.grey[800];
 
 //--------
 var loginBackgroundColor = Colors.blueGrey[400];
-var appLogo;
 
 List<BoxShadow> shadowList = [
   BoxShadow(

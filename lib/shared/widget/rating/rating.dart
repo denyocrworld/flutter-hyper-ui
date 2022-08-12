@@ -17,7 +17,8 @@ class ExRating extends StatefulWidget {
   final bool? disableTranslate;
   final bool? hideLabel;
 
-  ExRating({
+  const ExRating({
+    Key? key,
     required this.id,
     this.label = "",
     this.value,
@@ -28,7 +29,7 @@ class ExRating extends StatefulWidget {
     this.disableTranslate = false,
     this.visibleIf,
     this.hideLabel = false,
-  });
+  }) : super(key: key);
 
   @override
   ExRatingState createState() => ExRatingState();

@@ -7,12 +7,13 @@ class ExSwitch extends StatefulWidget {
   final bool? value;
   final Function(String)? onChanged;
 
-  ExSwitch({
+  const ExSwitch({
+    Key? key,
     required this.id,
     this.label = "",
     this.value = false,
     this.onChanged,
-  });
+  }) : super(key: key);
 
   @override
   _ExSwitchState createState() => _ExSwitchState();

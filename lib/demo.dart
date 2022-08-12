@@ -98,15 +98,15 @@ class FlutterHyperUiKitDemoView extends StatelessWidget {
                   },
                 ),
               ),
-              ExTextField(
+              const ExTextField(
                 id: "email",
                 label: "Email",
               ),
-              ExImagePicker(
+              const ExImagePicker(
                 id: "photo",
                 label: "Photo",
               ),
-              ExLocationPicker(
+              const ExLocationPicker(
                 id: "location",
                 label: "Address",
               ),

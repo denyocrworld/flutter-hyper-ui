@@ -24,7 +24,8 @@ class ExTextField extends StatefulWidget {
   final Function(String text)? onChanged;
   final Function(String text)? onSubmitted;
 
-  ExTextField({
+  const ExTextField({
+    Key? key,
     required this.id,
     this.label,
     this.value = "",
@@ -38,7 +39,7 @@ class ExTextField extends StatefulWidget {
     //-----------
     this.style,
     this.size,
-  });
+  }) : super(key: key);
 
   @override
   _ExTextFieldState createState() => _ExTextFieldState();

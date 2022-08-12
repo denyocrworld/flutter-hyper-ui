@@ -21,13 +21,14 @@ class ExImagePicker extends StatefulWidget {
   final Function(String value)? onChanged;
   final bool? compress;
 
-  ExImagePicker({
+  const ExImagePicker({
+    Key? key,
     required this.id,
     required this.label,
     this.value,
     this.onChanged,
     this.compress = false,
-  });
+  }) : super(key: key);
 
   @override
   _ExImagePickerState createState() => _ExImagePickerState();

@@ -20,7 +20,8 @@ class ExSearchPicker extends StatefulWidget {
   final Function(String? value)? onChanged;
   final Function(String? value)? onSubmitted;
 
-  ExSearchPicker({
+  const ExSearchPicker({
+    Key? key,
     required this.id,
     required this.futureBuilder,
     required this.labelFieldBuilder,
@@ -35,7 +36,7 @@ class ExSearchPicker extends StatefulWidget {
     this.onSubmitted,
     this.maxLines = 1,
     this.enabled = true,
-  });
+  }) : super(key: key);
 
   @override
   ExSearchPickerState createState() => ExSearchPickerState();

@@ -12,7 +12,7 @@ class PowerDocument extends StatefulWidget {
   }
 
   final Function(Map) builder;
-  PowerDocument({
+  const PowerDocument({
     required this.id,
     required this.builder,
     required this.futureBuilder,

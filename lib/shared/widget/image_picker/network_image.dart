@@ -8,12 +8,13 @@ class ExImage extends StatelessWidget {
   final double? height;
   final BoxFit? fit;
 
-  ExImage(
+  const ExImage(
     this.src, {
+    Key? key,
     this.width,
     this.height,
     this.fit,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -28,7 +28,7 @@ class ExNavigation extends StatefulWidget {
   final Color? unselectedColor;
   final PreferredSizeWidget? appBar;
 
-  ExNavigation({
+  const ExNavigation({
     Key? key,
     required this.children,
     required this.menus,
