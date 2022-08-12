@@ -6,7 +6,7 @@ class TemplateChatDetailView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //#TEMPLATE ui_login
+    //#TEMPLATE ui_chat_detail
     /*
     ------------------------
     https://capekngoding.com
