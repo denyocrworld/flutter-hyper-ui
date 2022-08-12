@@ -331,7 +331,7 @@ class _ExNavigationState extends State<ExNavigation> {
       currentIndex: selectedIndex,
       onTap: (newSelectedIndex) {
         selectedIndex = newSelectedIndex;
-        print(newSelectedIndex);
+
         setState(() {});
       },
       items: List.generate(

@@ -146,7 +146,6 @@ class _ExImagePickerState extends State<ExImagePicker>
 
           var data = res.data["data"];
           var url = data["url"];
-          print(url);
 
           imageUrl = url;
           Input.set(widget.id, imageUrl);

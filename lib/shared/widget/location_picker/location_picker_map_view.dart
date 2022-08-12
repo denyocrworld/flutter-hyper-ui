@@ -68,13 +68,7 @@ class LocationPickerMapState extends State<LocationPickerMap> {
       currentLatitude = widget.latitude ?? currentLatitude;
       currentLongitude = widget.longitude ?? currentLongitude;
     } else {
-      print("################");
-      print("GetCurrentLocation...###");
-      print("################");
       await getCurrentLocation();
-      print("################");
-      print("GetCurrentLocation [DONE]");
-      print("################");
 
       setState(() {
         loading = false;
@@ -126,9 +120,7 @@ class LocationPickerMapState extends State<LocationPickerMap> {
 
       nominatimSearchResults.addAll(apiResponse.data);
       setState(() {});
-    } catch (_) {
-      print("Nominatim API ERROR");
-    }
+    } catch (_) {}
 
     setState(() {
       nominatimSearchLoading = false;
@@ -383,9 +375,6 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                                     updatePosition = true;
                                     currentLatitude = lat;
                                     currentLongitude = lng;
-
-                                    print("set Latitude to $lat");
-                                    print("set Longitude to $lng");
 
                                     nominatimSearchResults = [];
 

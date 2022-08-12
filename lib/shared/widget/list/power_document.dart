@@ -32,7 +32,7 @@ class PowerDocumentState extends State<PowerDocument> {
   void onRefresh() async {
     // monitor network fetch
     var response = await widget.futureBuilder(page);
-    print(response);
+
     // if failed,use refreshFailed()
     loading = false;
   }
@@ -42,16 +42,12 @@ class PowerDocumentState extends State<PowerDocument> {
   Future onLoading() async {
     loading = true;
     setState(() {});
-    print("ITEMS CLEAR!");
+
     await Future.delayed(const Duration(milliseconds: 100));
 
-    print("_onLoading...");
     // monitor network fetch
     int page = 1;
     var response = await widget.futureBuilder(page);
-    print("powerDocumentResponse:");
-    print("${response}");
-    print("powerDocumentResponse:");
 
     if (response != null) {
       item = response;

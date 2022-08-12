@@ -18,7 +18,6 @@ class Input {
 
   static resetValues() {
     inputController.forEach((key, value) {
-      print("Reset Value for $key");
       value.resetValue();
     });
   }

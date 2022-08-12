@@ -50,7 +50,7 @@ class PowerListState extends State<PowerList> {
   void onRefresh() async {
     // monitor network fetch
     var response = await widget.futureBuilder(page);
-    print(response);
+
     // if failed,use refreshFailed()
     loading = false;
   }
@@ -61,10 +61,9 @@ class PowerListState extends State<PowerList> {
     loading = true;
     items.clear();
     setState(() {});
-    print("ITEMS CLEAR!");
+
     await Future.delayed(const Duration(milliseconds: 100));
 
-    print("_onLoading...");
     // monitor network fetch
     page = 1;
     var response = await widget.futureBuilder(page);
@@ -78,17 +77,15 @@ class PowerListState extends State<PowerList> {
 
     loading = false;
     if (mounted) setState(() {});
-    print("onLoading success! ${items.length}");
   }
 
   Future nextPage() async {
     page++;
     bottomLoading = true;
     setState(() {});
-    print("ITEMS CLEAR!");
+
     await Future.delayed(const Duration(milliseconds: 100));
 
-    print("_onLoading...");
     // monitor network fetch
     var response = await widget.futureBuilder(page);
 
@@ -101,7 +98,6 @@ class PowerListState extends State<PowerList> {
 
     bottomLoading = false;
     if (mounted) setState(() {});
-    print("onLoading success! ${items.length}");
   }
 
   late String id;
