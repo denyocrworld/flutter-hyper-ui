@@ -5,7 +5,7 @@ String value = "";
 
 void main(args) {
   command = args.isNotEmpty ? args[0] : "";
-  value = args.length >= 1 ? args[1] : "";
+  value = args.length > 1 ? args[1] : "";
 
   switch (command) {
     case "snippet":
@@ -80,16 +80,16 @@ generateSnippet() async {
     if (file is Directory) {}
   }
 
-  if (File("c:/yo/owner.txt").existsSync() == false) {
-    var output = File("./view_template.json");
-    output.writeAsStringSync("""
-{
-  ${codes.join(",\n")}
-}
-""");
+  if (File("c:/yo/owner.txt").existsSync()) {
+// //     var output = File("./template.json");
+// //     output.writeAsStringSync("""
+// // {
+// //   ${codes.join(",\n")}
+// // }
+// // """);
 
     var output2 = File(
-        r"C:\Users\denyo\Documents\FLUTTER_PROJECT\flutter-hyper-extension-vscode\snippets\view_template.json");
+        r"C:\Users\denyo\Documents\FLUTTER_PROJECT\flutter-hyper-extension-vscode\snippets\template.json");
     output2.writeAsStringSync("""
 {
   ${codes.join(",\n")}
