@@ -184,7 +184,7 @@ class ExSearchPickerState extends State<ExSearchPicker>
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     // child: Text("Nomor Asset: ${currentSearch!.namaSearch}"),
-                    child: Text("${widget.infoFieldBuilder(currentSearch!)}"),
+                    child: Text(widget.infoFieldBuilder(currentSearch!)),
                   ),
               ],
             ),
@@ -292,8 +292,8 @@ class _SearchPickerSearchListState extends State<SearchPickerSearchList> {
                     },
                     child: Card(
                       child: ListTile(
-                        title: Text("${widget.labelFieldBuilder(item)}"),
-                        subtitle: Text("${widget.infoFieldBuilder(item)}"),
+                        title: Text(widget.labelFieldBuilder(item)),
+                        subtitle: Text(widget.infoFieldBuilder(item)),
                       ),
                     ),
                   );
