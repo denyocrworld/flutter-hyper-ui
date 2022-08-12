@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-class ChatDetailView extends StatelessWidget {
-  const ChatDetailView({Key? key}) : super(key: key);
+class TemplateChatDetailView extends StatelessWidget {
+  const TemplateChatDetailView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

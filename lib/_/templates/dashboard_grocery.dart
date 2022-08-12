@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-class DashboardGroceryView extends StatelessWidget {
-  const DashboardGroceryView({Key? key}) : super(key: key);
+class TemplateDashboardGroceryView extends StatelessWidget {
+  const TemplateDashboardGroceryView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

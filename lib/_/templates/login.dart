@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class LoginView extends StatelessWidget {
-  const LoginView({Key? key}) : super(key: key);
+class TemplateLoginView extends StatelessWidget {
+  const TemplateLoginView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

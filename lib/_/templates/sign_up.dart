@@ -1,8 +1,8 @@
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
 
-class SignUpView extends StatelessWidget {
-  const SignUpView({Key? key}) : super(key: key);
+class TemplateSignUpView extends StatelessWidget {
+  const TemplateSignUpView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({Key? key}) : super(key: key);
+class TemplateWelcomeScreen extends StatelessWidget {
+  const TemplateWelcomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

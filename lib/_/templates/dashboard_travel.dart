@@ -3,8 +3,8 @@ import 'dart:ui';
 import 'package:badges/badges.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
-class DashboardTravelView extends StatelessWidget {
-  const DashboardTravelView({Key? key}) : super(key: key);
+class TemplateDashboardTravelView extends StatelessWidget {
+  const TemplateDashboardTravelView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

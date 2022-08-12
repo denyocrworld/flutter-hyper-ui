@@ -8,7 +8,7 @@ import 'templates/dashboard_travel.dart';
 import 'templates/login.dart';
 import 'templates/profile_basic.dart';
 import 'templates/sign_up.dart';
-import 'templates/welcome_screen.dart';
+import 'templates/welcome.dart';
 
 class DeveloperHomeView extends StatelessWidget {
   const DeveloperHomeView({Key? key}) : super(key: key);
@@ -22,17 +22,17 @@ class DeveloperHomeView extends StatelessWidget {
       {
         "icon": Icons.developer_board,
         "name": "Welcome",
-        "page": const WelcomeScreen(),
+        "page": const TemplateWelcomeScreen(),
       },
       {
         "icon": Icons.developer_board,
         "name": "Login",
-        "page": const LoginView(),
+        "page": const TemplateLoginView(),
       },
       {
         "icon": Icons.developer_board,
         "name": "Sign Up",
-        "page": const SignUpView(),
+        "page": const TemplateSignUpView(),
       },
       {
         "category": "Dashboard",
@@ -40,17 +40,17 @@ class DeveloperHomeView extends StatelessWidget {
       {
         "icon": Icons.developer_board,
         "name": "Dashboard Travel",
-        "page": const DashboardTravelView(),
+        "page": const TemplateDashboardTravelView(),
       },
       {
         "icon": Icons.developer_board,
         "name": "Dashboard Grocery",
-        "page": const DashboardGroceryView(),
+        "page": const TemplateDashboardGroceryView(),
       },
       {
         "icon": Icons.developer_board,
         "name": "Dashboard OVO",
-        "page": const DashboardOvoView(),
+        "page": const TemplateDashboardOvoView(),
       },
       {
         "category": "Profile",
@@ -58,7 +58,7 @@ class DeveloperHomeView extends StatelessWidget {
       {
         "icon": Icons.developer_board,
         "name": "Profile Basic",
-        "page": const ProfileBasicView(),
+        "page": const TemplateProfileBasicView(),
       },
       {
         "category": "Chat",
@@ -66,12 +66,12 @@ class DeveloperHomeView extends StatelessWidget {
       {
         "icon": Icons.developer_board,
         "name": "Chat List",
-        "page": const ChatListView(),
+        "page": const TemplateChatListView(),
       },
       {
         "icon": Icons.developer_board,
         "name": "Chat Detail",
-        "page": const ChatDetailView(),
+        "page": const TemplateChatDetailView(),
       },
       {
         "category": "Navigation",

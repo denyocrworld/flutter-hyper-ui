@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 
-class DashboardOvoView extends StatelessWidget {
-  const DashboardOvoView({Key? key}) : super(key: key);
+class TemplateDashboardOvoView extends StatelessWidget {
+  const TemplateDashboardOvoView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
