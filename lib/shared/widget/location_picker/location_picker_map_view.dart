@@ -75,10 +75,11 @@ class LocationPickerMapState extends State<LocationPickerMap> {
       });
     }
 
-    if (this.mounted)
+    if (mounted) {
       setState(() {
         loading = false;
       });
+    }
   }
 
   getCurrentLocation() async {

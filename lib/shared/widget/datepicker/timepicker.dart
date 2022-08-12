@@ -105,7 +105,7 @@ class ExTimePickerState extends State<ExTimePicker>
               ),
               child: Row(
                 children: [
-                  Text("$formattedValue"),
+                  Text(formattedValue),
                   const Spacer(),
                   Icon(
                     Icons.calendar_view_month,

@@ -72,7 +72,7 @@ class ExComboState extends State<ExCombo> implements InputControlState {
       updateValueByValue(widget.value!);
     }
     Input.inputController[widget.id] = this;
-    if (this.mounted) {
+    if (mounted) {
       setState(() {});
     }
   }

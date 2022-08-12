@@ -101,7 +101,7 @@ class ExDatePickerState extends State<ExDatePicker>
               ),
               child: Row(
                 children: [
-                  Text("$formattedValue"),
+                  Text(formattedValue),
                   const Spacer(),
                   Icon(
                     Icons.calendar_view_month,

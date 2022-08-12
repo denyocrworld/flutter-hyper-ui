@@ -349,7 +349,7 @@ class _ExNavigationState extends State<ExNavigation> {
   }
 
   getBody() {
-    if (widget.type == NavigationType.appbar)
+    if (widget.type == NavigationType.appbar) {
       return Column(
         children: [
           Container(
@@ -365,6 +365,7 @@ class _ExNavigationState extends State<ExNavigation> {
           ),
         ],
       );
+    }
 
     return IndexedStack(
       index: selectedIndex,

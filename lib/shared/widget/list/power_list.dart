@@ -49,7 +49,7 @@ class PowerListState extends State<PowerList> {
 
   void onRefresh() async {
     // monitor network fetch
-    var response = await widget.futureBuilder(page);
+    await widget.futureBuilder(page);
 
     // if failed,use refreshFailed()
     loading = false;
@@ -118,7 +118,7 @@ class PowerListState extends State<PowerList> {
   }
 
   reload() async {
-    if (this.mounted) {
+    if (mounted) {
       await onLoading();
     }
   }
