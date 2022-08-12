@@ -73,7 +73,7 @@ class _ExSliderState extends State<ExSlider> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: widget.height,
       child: Column(
         children: [

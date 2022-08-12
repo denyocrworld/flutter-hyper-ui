@@ -10,6 +10,7 @@ class ExCheckBox extends StatefulWidget {
   final TextInputType? keyboardType;
 
   ExCheckBox({
+    Key? key,
     required this.id,
     required this.items,
     this.label = "",
