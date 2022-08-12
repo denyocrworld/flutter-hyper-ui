@@ -170,15 +170,7 @@ class TemplateDashboardOvoView extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
                     Text(
-                      "\$",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    Text(
-                      '186.073',
+                      '186.073 USD',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,

@@ -471,14 +471,14 @@ class TemplateDashboardTravelView extends StatelessWidget {
                                             Row(
                                               children: const [
                                                 Text(
-                                                  "\$248 ",
+                                                  "248 USD",
                                                   style: TextStyle(
                                                     fontSize: 15,
                                                     fontWeight: FontWeight.bold,
                                                   ),
                                                 ),
                                                 Text(
-                                                  "\$299",
+                                                  "299",
                                                   style: TextStyle(
                                                     color: Colors.pink,
                                                     decoration: TextDecoration

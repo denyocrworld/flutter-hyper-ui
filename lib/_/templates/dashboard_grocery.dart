@@ -301,7 +301,7 @@ class TemplateDashboardGroceryView extends StatelessWidget {
                                     height: 12.0,
                                   ),
                                   Text(
-                                    "\$${item["price"]}",
+                                    "${item["price"]} USD",
                                     style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold,
@@ -413,7 +413,7 @@ class TemplateDashboardGroceryView extends StatelessWidget {
                                   width: 12.0,
                                 ),
                                 Text(
-                                  "\$${item["price"]}",
+                                  "${item["price"]} USD",
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
