@@ -27,6 +27,12 @@ dependencies:
   cached_network_image: ^3.2.0
   dio: ^4.0.6
   carousel_slider: ^4.1.1
+  badges:
+  flutter_custom_clippers:
+  material_design_icons_flutter:
+  rubber:
+  sliding_up_panel:
+  flutter_svg:
 dev_dependencies:
   flutter_test:
     sdk: flutter
