@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hyper_ui/module/qualified/chat_detail.dart';
-import 'package:flutter_hyper_ui/module//qualified/chat_list.dart';
-import 'package:flutter_hyper_ui/module//qualified/dashboard_grocery.dart';
-import 'package:flutter_hyper_ui/module//qualified/dashboard_ovo.dart';
-import 'package:flutter_hyper_ui/module//qualified/dashboard_travel.dart';
-import 'package:flutter_hyper_ui/module//qualified/login.dart';
-import 'package:flutter_hyper_ui/module//qualified/profile_basic.dart';
-import 'package:flutter_hyper_ui/module//qualified/sign_up.dart';
-import 'package:flutter_hyper_ui/module//qualified/welcome_screen.dart';
 
-class HomeView extends StatelessWidget {
-  const HomeView({Key? key}) : super(key: key);
+import 'templates/chat_detail.dart';
+import 'templates/chat_list.dart';
+import 'templates/dashboard_grocery.dart';
+import 'templates/dashboard_ovo.dart';
+import 'templates/dashboard_travel.dart';
+import 'templates/login.dart';
+import 'templates/profile_basic.dart';
+import 'templates/sign_up.dart';
+import 'templates/welcome_screen.dart';
+
+class DeveloperHomeView extends StatelessWidget {
+  const DeveloperHomeView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
