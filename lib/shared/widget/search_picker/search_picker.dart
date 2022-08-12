@@ -161,13 +161,15 @@ class ExSearchPickerState extends State<ExSearchPicker>
                           ),
                           onChanged: (text) {
                             Input.set(widget.id, text);
-                            if (widget.onChanged != null)
-                              return widget.onChanged!(text);
+                            if (widget.onChanged != null) {
+                              widget.onChanged!(text);
+                            }
                           },
                           onSubmitted: (text) {
                             Input.set(widget.id, text);
-                            if (widget.onSubmitted != null)
-                              return widget.onSubmitted!(text);
+                            if (widget.onSubmitted != null) {
+                              widget.onSubmitted!(text);
+                            }
                           },
                         ),
                       ),

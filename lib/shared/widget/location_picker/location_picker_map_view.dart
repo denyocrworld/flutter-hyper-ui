@@ -337,82 +337,79 @@ class LocationPickerMapState extends State<LocationPickerMap> {
               bottom: 0,
               child: SafeArea(
                 child: SingleChildScrollView(
-                  child: Container(
-                    child: SafeArea(
-                      child: Column(
-                        children: [
-                          if (nominatimSearchLoading)
-                            Container(
-                              width: MediaQuery.of(context).size.width,
-                              color: Colors.white,
-                              padding: const EdgeInsets.only(
-                                left: 16.0,
-                                right: 16.0,
-                                top: 8.0,
-                                bottom: 8.0,
-                              ),
-                              child: Text(
-                                "Searching...",
-                                style: TextStyle(
-                                  color: Colors.grey[900],
-                                ),
+                  child: SafeArea(
+                    child: Column(
+                      children: [
+                        if (nominatimSearchLoading)
+                          Container(
+                            width: MediaQuery.of(context).size.width,
+                            color: Colors.white,
+                            padding: const EdgeInsets.only(
+                              left: 16.0,
+                              right: 16.0,
+                              top: 8.0,
+                              bottom: 8.0,
+                            ),
+                            child: Text(
+                              "Searching...",
+                              style: TextStyle(
+                                color: Colors.grey[900],
                               ),
                             ),
-                          if (nominatimSearchResults.isNotEmpty)
-                            Container(
-                              color: Colors.white,
-                              height: 500.0,
-                              child: Wrap(
-                                  children: List.generate(
-                                      nominatimSearchResults.length, (index) {
-                                var item = nominatimSearchResults[index];
-                                var displayName = item["display_name"];
-                                var lat = double.parse(item["lat"].toString());
-                                var lng = double.parse(item["lon"].toString());
+                          ),
+                        if (nominatimSearchResults.isNotEmpty)
+                          Container(
+                            color: Colors.white,
+                            height: 500.0,
+                            child: Wrap(
+                                children: List.generate(
+                                    nominatimSearchResults.length, (index) {
+                              var item = nominatimSearchResults[index];
+                              var displayName = item["display_name"];
+                              var lat = double.parse(item["lat"].toString());
+                              var lng = double.parse(item["lon"].toString());
 
-                                return InkWell(
-                                  onTap: () async {
-                                    updatePosition = true;
-                                    currentLatitude = lat;
-                                    currentLongitude = lng;
+                              return InkWell(
+                                onTap: () async {
+                                  updatePosition = true;
+                                  currentLatitude = lat;
+                                  currentLongitude = lng;
 
-                                    nominatimSearchResults = [];
+                                  nominatimSearchResults = [];
 
-                                    searchController.text =
-                                        item["display_name"];
+                                  searchController.text = item["display_name"];
 
-                                    mapController.move(
-                                        LatLng(
-                                          currentLatitude,
-                                          currentLongitude,
-                                        ),
-                                        13.0);
-
-                                    setState(() {
-                                      nominatimSearchResults = [];
-                                    });
-                                  },
-                                  child: Container(
-                                    width: MediaQuery.of(context).size.width,
-                                    padding: const EdgeInsets.only(
-                                      left: 16.0,
-                                      right: 16.0,
-                                      top: 8.0,
-                                      bottom: 8.0,
-                                    ),
-                                    child: Text(
-                                      displayName,
-                                      style: TextStyle(
-                                        fontSize: 14.0,
-                                        color: Colors.grey[900],
+                                  mapController.move(
+                                      LatLng(
+                                        currentLatitude,
+                                        currentLongitude,
                                       ),
+                                      13.0);
+
+                                  setState(() {
+                                    nominatimSearchResults = [];
+                                  });
+                                },
+                                child: Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  padding: const EdgeInsets.only(
+                                    left: 16.0,
+                                    right: 16.0,
+                                    top: 8.0,
+                                    bottom: 8.0,
+                                  ),
+                                  child: Text(
+                                    displayName,
+                                    style: TextStyle(
+                                      fontSize: 14.0,
+                                      color: Colors.grey[900],
                                     ),
                                   ),
-                                );
-                              })),
-                            ),
-                        ],
-                      ),
+                                ),
+                              );
+                            })),
+                          ),
+                      ],
                     ),
                   ),
                 ),

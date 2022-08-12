@@ -58,63 +58,61 @@ class _ExCheckBoxState extends State<ExCheckBox> implements InputControlState {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Container(
-        padding: const EdgeInsets.all(10.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            if (widget.label!.isNotEmpty) ...[
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 4.0,
-                  right: 4.0,
-                  top: 4.0,
-                  bottom: 4.0,
-                ),
-                child: Text("${widget.label}"),
+      padding: const EdgeInsets.all(10.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          if (widget.label!.isNotEmpty) ...[
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 4.0,
+                right: 4.0,
+                top: 4.0,
+                bottom: 4.0,
               ),
-              const SizedBox(
-                height: 6.0,
-              ),
-            ],
-            Column(
-              children: List.generate(widget.items!.length, (index) {
-                var item = widget.items![index];
-                bool selected =
-                    selectedValues.contains(item["value"]) ? true : false;
-
-                return Container(
-                  padding: const EdgeInsets.only(
-                    left: 10.0,
-                    right: 10.0,
-                    top: 2.0,
-                    bottom: 2.0,
-                  ),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: Text("${item["label"]}"),
-                      ),
-                      Checkbox(
-                        value: selected,
-                        onChanged: (value) {
-                          if (value == true) {
-                            selectedValues.add(item["value"]);
-                          } else {
-                            selectedValues.remove(item["value"]);
-                          }
-                          Input.set(widget.id, selectedValues);
-                          setState(() {});
-                        },
-                      ),
-                    ],
-                  ),
-                );
-              }),
+              child: Text("${widget.label}"),
+            ),
+            const SizedBox(
+              height: 6.0,
             ),
           ],
-        ),
+          Column(
+            children: List.generate(widget.items!.length, (index) {
+              var item = widget.items![index];
+              bool selected =
+                  selectedValues.contains(item["value"]) ? true : false;
+
+              return Container(
+                padding: const EdgeInsets.only(
+                  left: 10.0,
+                  right: 10.0,
+                  top: 2.0,
+                  bottom: 2.0,
+                ),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text("${item["label"]}"),
+                    ),
+                    Checkbox(
+                      value: selected,
+                      onChanged: (value) {
+                        if (value == true) {
+                          selectedValues.add(item["value"]);
+                        } else {
+                          selectedValues.remove(item["value"]);
+                        }
+                        Input.set(widget.id, selectedValues);
+                        setState(() {});
+                      },
+                    ),
+                  ],
+                ),
+              );
+            }),
+          ),
+        ],
       ),
     );
   }

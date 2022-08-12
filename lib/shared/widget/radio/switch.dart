@@ -45,23 +45,21 @@ class _ExSwitchState extends State<ExSwitch> implements InputControlState {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Container(
-        padding: const EdgeInsets.all(10.0),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Expanded(
-              child: Text("${widget.label}"),
-            ),
-            Switch(
-              value: selectedValue!,
-              onChanged: (value) {
-                setValue(value);
-              },
-            ),
-          ],
-        ),
+      padding: const EdgeInsets.all(10.0),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            child: Text("${widget.label}"),
+          ),
+          Switch(
+            value: selectedValue!,
+            onChanged: (value) {
+              setValue(value);
+            },
+          ),
+        ],
       ),
     );
   }

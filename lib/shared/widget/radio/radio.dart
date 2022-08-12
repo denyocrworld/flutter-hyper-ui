@@ -69,67 +69,65 @@ class _ExRadioState extends State<ExRadio> implements InputControlState {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Container(
-        padding: const EdgeInsets.all(10.0),
-        height: widget.label!.isNotEmpty ? 80.0 : 60.0,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            if (widget.label!.isNotEmpty)
-              Padding(
-                padding: const EdgeInsets.only(
-                  left: 4.0,
-                  right: 4.0,
-                  top: 4.0,
-                  bottom: 4.0,
-                ),
-                child: Text("${widget.label}"),
+      padding: const EdgeInsets.all(10.0),
+      height: widget.label!.isNotEmpty ? 80.0 : 60.0,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          if (widget.label!.isNotEmpty)
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 4.0,
+                right: 4.0,
+                top: 4.0,
+                bottom: 4.0,
               ),
-            Expanded(
-              child: ListView.builder(
-                itemCount: widget.items!.length,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) {
-                  var item = widget.items![index];
-                  bool selected = selectedValue == item["value"];
-
-                  return InkWell(
-                    onTap: () {
-                      selectedValue = item["value"];
-                      setState(() {});
-                      if (widget.onChanged != null) {
-                        widget.onChanged!(selectedValue!);
-                      }
-                    },
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: selected
-                            ? Theme.of(context).primaryColor
-                            : Colors.grey[300],
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(20.0)),
-                      ),
-                      padding: const EdgeInsets.only(
-                        left: 20,
-                        right: 20,
-                      ),
-                      margin: const EdgeInsets.only(right: 10.0),
-                      child: Center(
-                          child: Text(
-                        "${item["value"]}",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: selected ? Colors.white : Colors.grey[400],
-                        ),
-                      )),
-                    ),
-                  );
-                },
-              ),
+              child: Text("${widget.label}"),
             ),
-          ],
-        ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: widget.items!.length,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                var item = widget.items![index];
+                bool selected = selectedValue == item["value"];
+
+                return InkWell(
+                  onTap: () {
+                    selectedValue = item["value"];
+                    setState(() {});
+                    if (widget.onChanged != null) {
+                      widget.onChanged!(selectedValue!);
+                    }
+                  },
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: selected
+                          ? Theme.of(context).primaryColor
+                          : Colors.grey[300],
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20.0)),
+                    ),
+                    padding: const EdgeInsets.only(
+                      left: 20,
+                      right: 20,
+                    ),
+                    margin: const EdgeInsets.only(right: 10.0),
+                    child: Center(
+                        child: Text(
+                      "${item["value"]}",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: selected ? Colors.white : Colors.grey[400],
+                      ),
+                    )),
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }

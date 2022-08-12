@@ -61,12 +61,6 @@ class _ExSearchFieldState extends State<ExSearchField>
 
   @override
   Widget build(BuildContext context) {
-    double textAreaHeight = 0;
-    if (widget.maxLines != null && widget.maxLines! >= 2) {
-      textAreaHeight = (widget.size ?? md) * widget.maxLines!;
-    }
-    var height = (textAreaHeight) + (widget.size ?? md) + 50;
-
     return Container(
       height: widget.size ?? 50.0,
       padding: const EdgeInsets.only(
@@ -96,11 +90,11 @@ class _ExSearchFieldState extends State<ExSearchField>
         ),
         onChanged: (text) {
           Input.set(widget.id, text);
-          if (widget.onChanged != null) return widget.onChanged!(text);
+          if (widget.onChanged != null) widget.onChanged!(text);
         },
         onSubmitted: (text) {
           Input.set(widget.id, text);
-          if (widget.onSubmitted != null) return widget.onSubmitted!(text);
+          if (widget.onSubmitted != null) widget.onSubmitted!(text);
         },
       ),
     );

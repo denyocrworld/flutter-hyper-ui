@@ -23,13 +23,11 @@ class ExImage extends StatelessWidget {
       fit: fit,
       imageUrl: src,
       placeholder: (context, url) => Container(
-        child: Container(
-          constraints: const BoxConstraints(
-            maxWidth: 50.0,
-          ),
-          child: const Center(
-            child: CircularProgressIndicator(),
-          ),
+        constraints: const BoxConstraints(
+          maxWidth: 50.0,
+        ),
+        child: const Center(
+          child: CircularProgressIndicator(),
         ),
       ),
       errorWidget: (context, url, error) => const Icon(Icons.error),
