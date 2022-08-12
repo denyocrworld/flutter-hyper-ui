@@ -6,11 +6,27 @@ class ChatDetailView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //#TEMPLATE ui_login
     /*
+    ------------------------
+    https://capekngoding.com
+    ------------------------
     Starring:
     Name: Jaisy Al Huda
     Linkedin: https://www.linkedin.com/in/jaisy-al-huda-622a8bb2/
+    ------------------------
+    [1] Update pubspec.yaml
+    material_design_icons_flutter:
+
+    [2] Import
+    import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+    ------------------------
+    Code generation with snippets can be a good solution for you or it can kill you.
+    A basic understanding of Dart and Flutter is required.
+    Keep it in mind, Our snippet can't generate many files yet. So, all of our snippets are put in one file which is not best practice.
+    ------------------------
     */
+
     List messageList = [
       {
         "message": "Can you check your email?",
@@ -460,5 +476,6 @@ class ChatDetailView extends StatelessWidget {
         ],
       ),
     );
+    //#END
   }
 }

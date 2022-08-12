@@ -6,11 +6,27 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //#TEMPLATE ui_welcome
     /*
+    ------------------------
+    https://capekngoding.com
+    ------------------------
     Starring:
     Name: Flutter Way
     Youtube: https: //www.youtube.com/c/TheFlutterWay/playlists?app=desktop
+    ------------------------
+    [1] Update pubspec.yaml
+    flutter_svg:
+
+    [2] Import
+    import 'package:flutter_svg/svg.dart';
+    ------------------------
+    Code generation with snippets can be a good solution for you or it can kill you.
+    A basic understanding of Dart and Flutter is required.
+    Keep it in mind, Our snippet can't generate many files yet. So, all of our snippets are put in one file which is not best practice.
+    ------------------------
     */
+
     return Theme(
       data: ThemeData(
         primaryColor: const Color(0xFF6F35A5),
@@ -143,5 +159,6 @@ class WelcomeScreen extends StatelessWidget {
         ),
       ),
     );
+    //#END
   }
 }

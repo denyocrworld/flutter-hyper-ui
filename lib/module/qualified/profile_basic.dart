@@ -5,11 +5,23 @@ class ProfileBasicView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //#TEMPLATE ui_profile_basic
     /*
+    ------------------------
+    https://capekngoding.com
+    ------------------------
     Starring:
     Name: Dicky Darmawan
     Github: https://github.com/Dicky019
+    ------------------------
+    -
+    ------------------------
+    Code generation with snippets can be a good solution for you or it can kill you.
+    A basic understanding of Dart and Flutter is required.
+    Keep it in mind, Our snippet can't generate many files yet. So, all of our snippets are put in one file which is not best practice.
+    ------------------------
     */
+
     List<Map<String, dynamic>> card1 = [
       {
         'name': 'Marks',
@@ -389,5 +401,6 @@ class ProfileBasicView extends StatelessWidget {
         ),
       ),
     );
+    //#END
   }
 }

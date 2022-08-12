@@ -1,7 +1,6 @@
-import 'dart:ui';
-
-import 'package:badges/badges.dart';
 import 'package:flutter/material.dart';
+import 'dart:ui';
+import 'package:badges/badges.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 
 class DashboardTravelView extends StatelessWidget {
@@ -9,11 +8,29 @@ class DashboardTravelView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //#TEMPLATE ui_dashboard_travel
     /*
+    ------------------------
+    https://capekngoding.com
+    ------------------------
     Starring:
     Name: Aldi.M.Alpaujan
     Email: aldi.m.alpaujan.2@gmail.com
     Github: https://github.com/AldiAlpaujan
+    ------------------------
+    [1] Update pubspec.yaml
+    badges:
+    material_design_icons_flutter:
+
+    [2] Import
+    import 'dart:ui';
+    import 'package:badges/badges.dart';
+    import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+    ------------------------
+    Code generation with snippets can be a good solution for you or it can kill you.
+    A basic understanding of Dart and Flutter is required.
+    Keep it in mind, Our snippet can't generate many files yet. So, all of our snippets are put in one file which is not best practice.
+    ------------------------
     */
     List<Map<String, dynamic>> popularNearby = [
       {
@@ -598,5 +615,6 @@ class DashboardTravelView extends StatelessWidget {
         ),
       ),
     );
+    //#END
   }
 }

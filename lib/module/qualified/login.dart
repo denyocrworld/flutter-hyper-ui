@@ -6,6 +6,7 @@ class LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //#TEMPLATE ui_login
     /*
     ------------------------
     https://capekngoding.com
@@ -16,6 +17,9 @@ class LoginView extends StatelessWidget {
     ------------------------
     [1] Update pubspec.yaml
     flutter_svg:
+
+    [2] Import
+    import 'package:flutter_svg/svg.dart';
     ------------------------
     Code generation with snippets can be a good solution for you or it can kill you.
     A basic understanding of Dart and Flutter is required.
@@ -301,5 +305,6 @@ class MobileLoginScreen extends StatelessWidget {
         ),
       ],
     );
+    //#END
   }
 }

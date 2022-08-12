@@ -8,12 +8,13 @@ class ExDatePicker extends StatefulWidget {
   final DateTime? value;
   final Function(DateTime value)? onChanged;
 
-  ExDatePicker({
+  const ExDatePicker({
+    Key? key,
     required this.id,
     this.label,
     this.value,
     this.onChanged,
-  });
+  }) : super(key: key);
 
   @override
   ExDatePickerState createState() => ExDatePickerState();

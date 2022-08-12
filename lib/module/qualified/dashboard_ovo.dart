@@ -6,11 +6,26 @@ class DashboardOvoView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //#TEMPLATE ui_dashboard_ovo
     /*
+    ------------------------
+    https://capekngoding.com
+    ------------------------
     Starring:
     Name: Danu Septian
     Email: danuseptian1996@gmail.com
     Website: danuseptian.com
+    ------------------------
+    [1] Update pubspec.yaml
+    flutter_custom_clippers:
+
+    [2] Import
+    import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
+    ------------------------
+    Code generation with snippets can be a good solution for you or it can kill you.
+    A basic understanding of Dart and Flutter is required.
+    Keep it in mind, Our snippet can't generate many files yet. So, all of our snippets are put in one file which is not best practice.
+    ------------------------
     */
 
     List<Map> categories = [
@@ -360,5 +375,6 @@ class DashboardOvoView extends StatelessWidget {
         ],
       ),
     );
+    //#END
   }
 }
