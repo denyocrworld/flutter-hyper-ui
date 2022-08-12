@@ -37,12 +37,14 @@ class ExDatePickerState extends State<ExDatePicker>
     return DateFormat("d MMM y").format(dateValue!);
   }
 
+  @override
   resetValue() {
     dateValue = null;
     Input.set(widget.id, dateValue);
     setState(() {});
   }
 
+  @override
   setValue(value) {
     dateValue = value;
     Input.set(widget.id, value);

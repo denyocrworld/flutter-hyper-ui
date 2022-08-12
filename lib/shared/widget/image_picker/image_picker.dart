@@ -47,12 +47,14 @@ class _ExImagePickerState extends State<ExImagePicker>
     Input.inputController[widget.id] = this;
   }
 
+  @override
   setValue(value) {
     imageUrl = value;
     Input.set(widget.id, value);
     setState(() {});
   }
 
+  @override
   resetValue() {
     imageUrl = null;
     Input.set(widget.id, null);
@@ -202,7 +204,7 @@ class _ExImagePickerState extends State<ExImagePicker>
                       const SizedBox(
                         height: 10.0,
                       ),
-                      Container(
+                      SizedBox(
                         width: 20.0,
                         height: 20.0,
                         child: CircularProgressIndicator(

@@ -29,11 +29,13 @@ class _ExSwitchState extends State<ExSwitch> implements InputControlState {
     Input.set(widget.id, selectedValue);
   }
 
+  @override
   setValue(value) {
     selectedValue = value;
     setState(() {});
   }
 
+  @override
   resetValue() {
     Input.set(widget.id, false);
     selectedValue = false;

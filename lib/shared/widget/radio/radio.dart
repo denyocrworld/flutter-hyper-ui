@@ -41,6 +41,7 @@ class _ExRadioState extends State<ExRadio> implements InputControlState {
     Input.inputController[widget.id] = this;
   }
 
+  @override
   setValue(value) {
     var selectedComboItem =
         widget.items!.where((i) => i["value"] == value).toList();
@@ -57,6 +58,7 @@ class _ExRadioState extends State<ExRadio> implements InputControlState {
     setState(() {});
   }
 
+  @override
   resetValue() {
     setState(() {
       Input.set(widget.id, widget.items![0]["value"]);

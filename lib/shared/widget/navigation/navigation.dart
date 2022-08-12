@@ -146,10 +146,10 @@ class _ExNavigationState extends State<ExNavigation> {
                         selectedIndex = index;
                         setState(() {});
                       },
-                      child: Container(
+                      child: SizedBox(
                         child: Stack(
                           children: [
-                            Container(
+                            SizedBox(
                               width: MediaQuery.of(context).size.width,
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -179,7 +179,7 @@ class _ExNavigationState extends State<ExNavigation> {
                             ),
                             Align(
                               alignment: Alignment.topCenter,
-                              child: Container(
+                              child: SizedBox(
                                 height: 50.0,
                                 child: Column(
                                   children: [

@@ -49,7 +49,7 @@ class ExColorPickerState extends State<ExColorPicker>
     Colors.blueGrey[300]!,
     Colors.orange[300]!,
   ];
-
+  @override
   void initState() {
     super.initState();
     colorList = widget.colorsList ?? colorList;
@@ -74,6 +74,7 @@ class ExColorPickerState extends State<ExColorPicker>
     }
   }
 
+  @override
   setValue(value) {
     selectedValue = value;
     checkColorExistence();
@@ -81,6 +82,7 @@ class ExColorPickerState extends State<ExColorPicker>
     setState(() {});
   }
 
+  @override
   resetValue() {
     setState(() {
       selectedValue = null;
@@ -172,7 +174,7 @@ class ExColorPickerState extends State<ExColorPicker>
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           if (!widget.hideLabel!) getLabel(),
-          Container(
+          SizedBox(
             height: 60,
             child: Row(
               children: [

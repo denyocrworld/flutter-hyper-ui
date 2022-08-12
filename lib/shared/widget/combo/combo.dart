@@ -97,10 +97,10 @@ class ExComboState extends State<ExCombo> implements InputControlState {
 
   updateValueByValue(String value) {
     try {
-      if (comboItems.length == 0) return;
+      if (comboItems.isEmpty) return;
       var results = comboItems.where((item) => getWhere(item, value)).toList();
 
-      if (results.length == 0) return;
+      if (results.isEmpty) return;
 
       var sv = results[0];
       Input.set(widget.id, sv["value"]);
@@ -116,6 +116,7 @@ class ExComboState extends State<ExCombo> implements InputControlState {
     initItems(newComboItemList);
   }
 
+  @override
   void initState() {
     super.initState();
     initItems(widget.items);
@@ -127,6 +128,7 @@ class ExComboState extends State<ExCombo> implements InputControlState {
     super.dispose();
   }
 
+  @override
   resetValue() {
     setState(() {
       Input.set(widget.id, comboItems[0]["value"]);
@@ -134,6 +136,7 @@ class ExComboState extends State<ExCombo> implements InputControlState {
     });
   }
 
+  @override
   setValue(value) {
     var selectedComboItem =
         comboItems.where((i) => i["value"] == value).toList();

@@ -47,11 +47,13 @@ class _ExSearchFieldState extends State<ExSearchField>
     Input.inputController[widget.id] = this;
   }
 
+  @override
   setValue(value) {
     controller.text = value;
     Input.set(widget.id, value);
   }
 
+  @override
   resetValue() {
     controller.text = "";
     Input.set(widget.id, "");

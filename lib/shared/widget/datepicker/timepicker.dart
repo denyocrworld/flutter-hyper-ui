@@ -43,12 +43,14 @@ class ExTimePickerState extends State<ExTimePicker>
     return DateFormat(widget.format).format(date);
   }
 
+  @override
   resetValue() {
     dateValue = null;
     Input.set(widget.id, dateValue);
     setState(() {});
   }
 
+  @override
   setValue(value) {
     dateValue = value;
     Input.set(widget.id, value);

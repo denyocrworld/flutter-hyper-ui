@@ -49,7 +49,7 @@ std::string Utf8FromUtf16(const wchar_t* utf16_string) {
       CP_UTF8, WC_ERR_INVALID_CHARS, utf16_string,
       -1, nullptr, 0, nullptr, nullptr);
   std::string utf8_string;
-  if (target_length == 0 || target_length > utf8_string.max_size()) {
+  if (target.isEmpty || target_length > utf8_string.max_size()) {
     return utf8_string;
   }
   utf8_string.resize(target_length);
@@ -57,7 +57,7 @@ std::string Utf8FromUtf16(const wchar_t* utf16_string) {
       CP_UTF8, WC_ERR_INVALID_CHARS, utf16_string,
       -1, utf8_string.data(),
       target_length, nullptr, nullptr);
-  if (converted_length == 0) {
+  if (converted.isEmpty) {
     return std::string();
   }
   return utf8_string;

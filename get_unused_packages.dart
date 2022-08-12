@@ -69,7 +69,6 @@ Future removeUnusedPackages() async {
 
 void main() async {
   await getProjectInfo();
-  // print(currentPackages);
   // return;
 
   var f = File("./lib/generated_plugin_registrant.dart");

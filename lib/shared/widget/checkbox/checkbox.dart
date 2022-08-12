@@ -40,12 +40,14 @@ class _ExCheckBoxState extends State<ExCheckBox> implements InputControlState {
     Input.inputController[widget.id] = this;
   }
 
+  @override
   setValue(value) {
     selectedValues = value;
     Input.set(widget.id, selectedValues);
     setState(() {});
   }
 
+  @override
   resetValue() {
     setState(() {
       Input.set(widget.id, []);

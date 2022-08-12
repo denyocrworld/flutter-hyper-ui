@@ -55,11 +55,13 @@ class ExSearchPickerState extends State<ExSearchPicker>
     Input.inputController[widget.id] = this;
   }
 
+  @override
   setValue(value) {
     controller.text = value ?? "";
     Input.set(widget.id, value);
   }
 
+  @override
   resetValue() {
     controller.text = "";
     Input.set(widget.id, "");

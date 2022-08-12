@@ -106,7 +106,7 @@ class LocationPickerMapState extends State<LocationPickerMap> {
   List nominatimSearchResults = [];
   bool nominatimSearchLoading = false;
   void nominatimSearch(search) async {
-    if (search.toString().length == 0) return;
+    if (search.toString().isEmpty) return;
 
     setState(() {
       nominatimSearchLoading = true;
@@ -140,7 +140,7 @@ class LocationPickerMapState extends State<LocationPickerMap> {
           Positioned(
             left: -1000,
             top: -1000,
-            child: Container(
+            child: SizedBox(
               width: 0.0,
               height: 0.0,
               child: MapViewer(),
@@ -149,7 +149,7 @@ class LocationPickerMapState extends State<LocationPickerMap> {
           if (loading)
             Align(
               alignment: Alignment.center,
-              child: Container(
+              child: SizedBox(
                 width: MediaQuery.of(context).size.width / 2,
                 height: 50.0,
                 child: Card(
@@ -329,7 +329,7 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                 ),
               ),
             ),
-          if (nominatimSearchLoading || nominatimSearchResults.length > 0)
+          if (nominatimSearchLoading || nominatimSearchResults.isNotEmpty)
             Positioned(
               left: 0,
               right: 0,
@@ -358,7 +358,7 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                                 ),
                               ),
                             ),
-                          if (nominatimSearchResults.length > 0)
+                          if (nominatimSearchResults.isNotEmpty)
                             Container(
                               color: Colors.white,
                               height: 500.0,

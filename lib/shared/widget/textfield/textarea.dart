@@ -8,11 +8,12 @@ class ExTextArea extends StatelessWidget {
   final String? value;
 
   ExTextArea({
+    Key? key,
     required this.id,
     required this.label,
     this.maxLines = 4,
     this.value,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

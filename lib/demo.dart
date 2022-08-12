@@ -67,7 +67,7 @@ class FlutterHyperUiKitDemoView extends StatelessWidget {
                   ),
                 ],
               ),
-              Container(
+              SizedBox(
                 height: 40.0,
                 child: ListView.builder(
                   itemCount: 5,

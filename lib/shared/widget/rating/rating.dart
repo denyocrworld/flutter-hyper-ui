@@ -36,7 +36,7 @@ class ExRating extends StatefulWidget {
 
 class ExRatingState extends State<ExRating> implements InputControlState {
   double selectedValue = 0.0;
-
+  @override
   void initState() {
     super.initState();
     selectedValue = widget.value ?? 0.0;
@@ -49,12 +49,14 @@ class ExRatingState extends State<ExRating> implements InputControlState {
     super.dispose();
   }
 
+  @override
   setValue(value) {
     selectedValue = value;
     Input.set(widget.id, selectedValue);
     setState(() {});
   }
 
+  @override
   resetValue() {
     setState(() {
       selectedValue = 0;
