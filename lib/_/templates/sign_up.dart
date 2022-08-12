@@ -65,8 +65,8 @@ class TemplateSignUpView extends StatelessWidget {
               Positioned(
                 top: 0,
                 left: 0,
-                child: Image.asset(
-                  "assets/images/main_top.png",
+                child: Image.network(
+                  "https://capekngoding.com/uploads/62f680369803f_main_top.png",
                   width: 120,
                 ),
               ),
@@ -88,7 +88,7 @@ class TemplateSignUpView extends StatelessWidget {
                               Expanded(
                                 flex: 8,
                                 child:
-                                    SvgPicture.asset("assets/icons/signup.svg"),
+                                    SvgPicture.network("https://capekngoding.com/uploads/62f68035b6171_signup.svg"),
                               ),
                               const Spacer(),
                             ],

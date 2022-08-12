@@ -66,8 +66,8 @@ class TemplateWelcomeScreen extends StatelessWidget {
               Positioned(
                 top: 0,
                 left: 0,
-                child: Image.asset(
-                  "assets/images/main_top.png",
+                child: Image.network(
+                  "https://capekngoding.com/uploads/62f680369803f_main_top.png",
                   width: 120,
                 ),
               ),
@@ -89,8 +89,8 @@ class TemplateWelcomeScreen extends StatelessWidget {
                                 const Spacer(),
                                 Expanded(
                                   flex: 8,
-                                  child: SvgPicture.asset(
-                                    "assets/icons/chat.svg",
+                                  child: SvgPicture.network(
+                                    "https://capekngoding.com/uploads/62f6803510340_chat.svg",
                                   ),
                                 ),
                                 const Spacer(),
