@@ -37,20 +37,12 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^1.0.0
-dependency_overrides:
-  # get: 
-  #   git:
-  #     url: https://github.com/denyocrworld/getx_dark_knight
 flutter:
   uses-material-design: true
-  # assets:
-  #   - assets/icon/
-  #   - assets/audio/
-  #   - assets/document/
-  #   - assets/image/
-  #   - assets/image/gradient/
-  #   - assets/image/promotion/
-  #   - assets/image/product/
-  #   - assets/video/
-  #   - assets/font/
-  #   - assets/code/
+  assets:
+    - assets/icon/
+    - assets/audio/
+    - assets/document/
+    - assets/font/
+    - assets/image/
+    - assets/video/
