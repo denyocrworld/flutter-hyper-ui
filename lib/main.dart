@@ -32,6 +32,8 @@ class _ExampleViewState extends State<ExampleView> {
             children: [
               ExButton(
                 label: "Save",
+                color: primaryColor,
+                icon: Icons.save,
                 onPressed: () {},
               ),
             ],
