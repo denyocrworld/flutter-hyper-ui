@@ -102,7 +102,7 @@ class ExButton extends StatelessWidget {
             top: 10.0,
           ),
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () => onPressed(),
         style: ElevatedButton.styleFrom(
           shadowColor: useShadow == true ? null : Colors.transparent,
           primary:

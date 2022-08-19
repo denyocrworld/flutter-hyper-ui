@@ -7,7 +7,6 @@ enum TextFieldType {
 }
 
 Map<String, TextEditingController> textFieldController = {};
-
 class ExTextField extends StatefulWidget {
   final String id;
   final String? label;
