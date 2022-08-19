@@ -25,7 +25,7 @@ class ExButton extends StatelessWidget {
     this.color,
     this.textColor,
     this.icon,
-    this.height = 40,
+    this.height = 50,
     this.width,
     this.borderRadius,
     this.boxShadow,
@@ -58,7 +58,7 @@ class ExButton extends StatelessWidget {
     } else if (size == xl) {
       return xl;
     }
-    return height;
+    return height ?? 120.0;
   }
 
   getWidth() {
@@ -82,6 +82,34 @@ class ExButton extends StatelessWidget {
   Widget build(BuildContext context) {
     double defaultPadding = label == null ? 0.0 : 26;
 
+    return Material(
+      child: Container(
+        width: getWidth() ?? MediaQuery.of(context).size.width,
+        height: getHeight(),
+        margin: margin ??
+            const EdgeInsets.only(
+              left: 10.0,
+              right: 10.0,
+              bottom: 10.0,
+              top: 10.0,
+            ),
+        child: ElevatedButton(
+          onPressed: () {},
+          style: ElevatedButton.styleFrom(
+            primary: color ?? primaryColor, //background color of button
+            // side: const BorderSide(
+            //   width: 1,
+            //   color: Colors.brown,
+            // ), //border width and color
+            elevation: 3, //elevation of button
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30),
+            ),
+          ),
+          child: const Text("Save"),
+        ),
+      ),
+    );
     return Material(
       color: Colors.transparent,
       // shape: CircleBorder(),

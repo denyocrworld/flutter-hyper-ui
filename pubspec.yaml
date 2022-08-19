@@ -24,7 +24,7 @@ dependencies:
   latlong2: ^0.8.1
   geolocator: ^8.0.3
   permission_handler: ^8.3.0
-  cached_network_image: ^3.2.0
+  cached_network_image: ^3.2.1
   dio: ^4.0.6
   carousel_slider: ^4.1.1
   badges:

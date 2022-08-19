@@ -24,8 +24,8 @@ List<BoxShadow> shadowList = [
   )
 ];
 
-const double xs = 20;
-const double sm = 28;
-const double md = 40;
-const double lg = 50;
-const double xl = 56;
+const double xs = 28;
+const double sm = 38;
+const double md = 50;
+const double lg = 60;
+const double xl = 70;
