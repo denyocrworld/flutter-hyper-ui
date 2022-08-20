@@ -89,8 +89,6 @@ class ExButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double defaultPadding = label == null ? 0.0 : 26;
-
     return Container(
       width: getWidth() ?? MediaQuery.of(context).size.width,
       height: getHeight(),
