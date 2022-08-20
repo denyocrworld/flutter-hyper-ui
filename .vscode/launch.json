@@ -5,18 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "fugi_app",
+            "name": "flutter_hyper_ui",
             "request": "launch",
             "type": "dart"
         },
         {
-            "name": "fugi_app (profile mode)",
+            "name": "flutter_hyper_ui (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "fugi_app (release mode)",
+            "name": "flutter_hyper_ui (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

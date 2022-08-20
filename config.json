@@ -1,3 +1,6 @@
 {
-    "modules": []
+    "modules": [
+        "login",
+        "dashboard"
+    ]
 }
