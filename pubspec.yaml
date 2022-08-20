@@ -43,7 +43,7 @@ dependencies:
 
   # STATE MANAGEMENT
   flutter_riverpod:
-  get:
+  # get:
 
 dev_dependencies:
   flutter_test:
