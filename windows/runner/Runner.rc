@@ -93,7 +93,7 @@ BEGIN
             VALUE "FileDescription", "flutter_hyper_ui" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "flutter_hyper_ui" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2022 com.codekaze. All rights reserved." "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2022 com.capekngoding. All rights reserved." "\0"
             VALUE "OriginalFilename", "flutter_hyper_ui.exe" "\0"
             VALUE "ProductName", "flutter_hyper_ui" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
