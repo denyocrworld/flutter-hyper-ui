@@ -16,6 +16,28 @@ class FormExampleView extends StatelessWidget {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
+              //#TEMPLATE s_btn
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text("Save"),
+              ),
+              //#END
+
+              //#TEMPLATE s_text
+              const TextField(
+                decoration: InputDecoration.collapsed(
+                  hintText: "Type something",
+                ),
+              ),
+              //#END
+
+              //#TEMPLATE s_btn_icon
+              IconButton(
+                onPressed: () {},
+                icon: const Icon(Icons.add),
+              ),
+              //#END
+
               //#TEMPLATE f_btn
               ExButton(
                 label: "Save",
