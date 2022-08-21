@@ -117,7 +117,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:980120019445:android:0cd68540f5b76fc6e340bc",
         "android_client_info": {
-          "package_name": "com.capekngoding.flutter_hyper_ui_fire"
+          "package_name": "com.example.flutter_hyper_ui_fire"
         }
       },
       "oauth_client": [
