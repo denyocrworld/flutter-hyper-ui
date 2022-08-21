@@ -42,7 +42,6 @@ dependencies:
   cloud_firestore:  
 
   # STATE MANAGEMENT
-  # flutter_riverpod:
   get:
 
 dev_dependencies:
