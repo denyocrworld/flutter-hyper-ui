@@ -18,6 +18,9 @@ class FormExampleView extends StatelessWidget {
             children: [
               //#TEMPLATE s_btn
               ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.purple,
+                ),
                 onPressed: () {},
                 child: const Text("Save"),
               ),
