@@ -166,7 +166,7 @@ removeAllUnusedPackages() async {
         }
       }
     }
-    File("./pubspec.new.yaml").writeAsStringSync(lines.join("\n"));
+    File("./pubspec.yaml").writeAsStringSync(lines.join("\n"));
   }
 
   await getProjectInfo();
