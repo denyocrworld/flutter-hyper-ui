@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
         import 'package:flutter/material.dart';
+        import 'package:flutter_hyper_ui/core.dart';
         import 'package:flutter_hyper_ui/setup.dart';
-        import 'package:flutter_riverpod/flutter_riverpod.dart';
-        import './riverpod_util.dart';
+        import 'package:get/get.dart';
         
         void main() async {
           await initialize();
@@ -13,12 +13,10 @@ import 'package:firebase_auth/firebase_auth.dart';
           }
         
           runApp(
-            ProviderScope(
-              child: MaterialApp(
-                debugShowCheckedModeBanner: false,
-                navigatorKey: Get.navigatorKey,
-                home: mainView,
-              ),
+            GetMaterialApp(
+              debugShowCheckedModeBanner: false,
+              theme: defaultTheme,
+              home: mainView,
             ),
           );
         }
