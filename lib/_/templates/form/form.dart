@@ -15,55 +15,23 @@ class FormExampleView extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(20.0),
           child: Column(
-            children: [
-              //#TEMPLATE s_btn
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.purple,
-                ),
-                onPressed: () {},
-                child: const Text("Save"),
-              ),
-              //#END
-
-              //#TEMPLATE s_text
-              const TextField(
-                decoration: InputDecoration.collapsed(
-                  hintText: "Type something",
-                ),
-              ),
-              //#END
-
-              //#TEMPLATE s_btn_icon
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(Icons.add),
-              ),
-              //#END
-
-              //#TEMPLATE f_btn
-              ExButton(
-                label: "Save",
-                color: primaryColor,
-                onPressed: () {},
-              ),
-              //#END
+            children: const [
               //#TEMPLATE f_text
-              const ExTextField(
+              ExTextField(
                 id: "first_name",
                 label: "First Name",
                 value: "Deny",
               ),
               //#END
               //#TEMPLATE f_password
-              const ExTextField(
+              ExTextField(
                 id: "password",
                 label: "Password",
                 textFieldType: TextFieldType.password,
               ),
               //#END
               //#TEMPLATE f_number
-              const ExTextField(
+              ExTextField(
                 id: "qty",
                 label: "Qty",
                 keyboardType: TextInputType.number,
@@ -71,14 +39,14 @@ class FormExampleView extends StatelessWidget {
               ),
               //#END
               //#TEMPLATE f_text_area
-              const ExTextArea(
+              ExTextArea(
                 id: "memo",
                 label: "Memo",
                 value: "nice one!",
               ),
               //#END
               //#TEMPLATE f_combo
-              const ExCombo(
+              ExCombo(
                 id: "gender",
                 label: "Gender",
                 items: [
@@ -95,7 +63,7 @@ class FormExampleView extends StatelessWidget {
               ),
               //#END
               //#TEMPLATE f_radio
-              const ExRadio(
+              ExRadio(
                 id: "gender",
                 label: "Gender",
                 items: [
@@ -112,14 +80,14 @@ class FormExampleView extends StatelessWidget {
               ),
               //#END
               //#TEMPLATE f_switch
-              const ExSwitch(
+              ExSwitch(
                 id: "gender",
                 label: "Gender",
                 value: true,
               ),
               //#END
               //#TEMPLATE f_check
-              const ExCheckBox(
+              ExCheckBox(
                 id: "my_hobby",
                 label: "My Hobby",
                 items: [
@@ -142,14 +110,14 @@ class FormExampleView extends StatelessWidget {
               ),
               //#END
               //#TEMPLATE f_image
-              const ExImagePicker(
+              ExImagePicker(
                 id: "photo",
                 label: "Photo",
                 // value: "https://i.ibb.co/PGv8ZzG/me.jpg",
               ),
               //#END
               //#TEMPLATE f_location
-              const ExLocationPicker(
+              ExLocationPicker(
                 id: "location",
                 label: "Location",
                 latitude: -6.218481065235333,
@@ -157,7 +125,7 @@ class FormExampleView extends StatelessWidget {
               ),
               //#END
               //#TEMPLATE f_color
-              const ExColorPicker(
+              ExColorPicker(
                 id: "color",
                 label: "Color",
               ),

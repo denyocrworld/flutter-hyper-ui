@@ -402,6 +402,54 @@ class DevSnippetView extends StatelessWidget {
               ),
             ),
             //#END
+
+            //----------------------------------------
+            Container(
+              height: 100.0,
+              decoration: BoxDecoration(
+                  //#TEMPLATE border
+                  border: Border.all(
+                    width: 1.0,
+                    color: Colors.grey[900]!,
+                  ),
+                  //#END
+                  //#TEMPLATE radius
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(12.0),
+                  ),
+                  //#END
+                  //#TEMPLATE shadow
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.2),
+                      spreadRadius: 4,
+                      blurRadius: 5,
+                      offset: const Offset(0, 7),
+                    ),
+                  ],
+                  //#END
+                  //#TEMPLATE decorationimage
+                  image: const DecorationImage(
+                    image: NetworkImage(
+                      "https://i.ibb.co/3pPYd14/freeban.jpg",
+                    ),
+                    fit: BoxFit.cover,
+                  ),
+                  //#END
+                  //#TEMPLATE gradient
+                  gradient: const LinearGradient(
+                    begin: Alignment.topRight,
+                    end: Alignment.bottomLeft,
+                    colors: [
+                      Colors.blue,
+                      Colors.red,
+                    ],
+                  )
+                  //#END
+                  ),
+            ),
+            //----------------------------------------
+
             //#TEMPLATE item_card
             Card(
               child: ListTile(
