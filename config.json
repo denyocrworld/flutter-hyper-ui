@@ -1,4 +1,6 @@
 {
-    "state_management": "getx",
-    "modules": []
+    "state_management": "riverpod",
+    "modules": [
+        "login"
+    ]
 }

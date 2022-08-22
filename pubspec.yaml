@@ -42,7 +42,7 @@ dependencies:
   cloud_firestore:  
 
   # STATE MANAGEMENT
-  get:
+  flutter_riverpod:
 
 dev_dependencies:
   flutter_test:
