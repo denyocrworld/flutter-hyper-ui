@@ -1,6 +1,4 @@
 {
-    "modules": [
-        "login",
-        "main_navigation"
-    ]
+    "state_management": "getx",
+    "modules": []
 }
