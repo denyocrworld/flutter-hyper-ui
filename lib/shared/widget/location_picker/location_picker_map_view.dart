@@ -1,11 +1,8 @@
 import 'dart:async';
 import 'dart:developer';
 import 'dart:io';
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-
 import 'package:flutter_hyper_ui/core.dart';
-import 'package:flutter_map/flutter_map.dart';
 import 'package:geolocator/geolocator.dart';
 
 import 'package:latlong2/latlong.dart';

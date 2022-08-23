@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hyper_ui/core.dart';
+import 'package:flutter_hyper_ui/shared/util/theme/theme_constants.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 var defaultTheme = ThemeData(

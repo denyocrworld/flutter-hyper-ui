@@ -1,15 +1,9 @@
 import 'dart:developer';
 import 'dart:io';
-import 'package:file_picker/file_picker.dart';
-import 'package:file_picker_cross/file_picker_cross.dart';
-import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:flutter_hyper_ui/core.dart';
 import 'package:path/path.dart' as path;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:dio/dio.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:uuid/uuid.dart';
 
 FilePickerCross? pickedFileInImagePicker;
 FilePickerResult? filePickerResult;
