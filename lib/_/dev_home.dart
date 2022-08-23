@@ -244,7 +244,7 @@ class DeveloperHomeView extends StatelessWidget {
               ),
               //#END
 
-              //#TEMPLATE button_stadium_outline
+              //#TEMPLATE button_outline_stadium
               OutlinedButton(
                 style: OutlinedButton.styleFrom(
                   primary: Colors.blueGrey,
@@ -255,7 +255,7 @@ class DeveloperHomeView extends StatelessWidget {
               ),
               //#END
 
-              //#TEMPLATE button_radius_outline
+              //#TEMPLATE button_outline_radius
               OutlinedButton(
                 style: OutlinedButton.styleFrom(
                   primary: Colors.blueGrey,
@@ -268,7 +268,7 @@ class DeveloperHomeView extends StatelessWidget {
               ),
               //#END
 
-              //#TEMPLATE button_beveled_outline
+              //#TEMPLATE button_outline_beveled
               OutlinedButton(
                 style: OutlinedButton.styleFrom(
                   primary: Colors.blueGrey,
