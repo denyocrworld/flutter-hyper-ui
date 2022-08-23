@@ -1,8 +1,6 @@
 import 'dart:developer';
 import 'dart:typed_data';
 import 'package:dio/dio.dart';
-import 'package:file_picker_cross/file_picker_cross.dart';
-import 'package:image_compression/image_compression.dart';
 
 class ImagePickerController {
   static Future<String?> uploadImage({
@@ -36,18 +34,5 @@ class ImagePickerController {
     log("IMGBBURL: $url");
 
     return url;
-  }
-}
-
-extension MyImageCompressorExtension on FilePickerCross {
-  Uint8List compressImage() {
-    var value = this;
-    final input = ImageFile(
-      rawBytes: value.toUint8List(),
-      filePath: value.path!,
-    );
-    return compress(
-      ImageFileConfiguration(input: input),
-    ).rawBytes;
   }
 }

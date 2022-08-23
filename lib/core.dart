@@ -1,6 +1,4 @@
-export './core_package.dart';
 export 'package:flutter_hyper_ui/core.dart';
-export 'package:flutter_hyper_ui/core_package.dart';
 export 'package:flutter_hyper_ui/firebase_options.dart';
 export 'package:flutter_hyper_ui/main.dart';
 export 'package:flutter_hyper_ui/setup.dart';
@@ -12,7 +10,6 @@ export 'package:flutter_hyper_ui/shared/util/theme/theme_constants.dart';
 export 'package:flutter_hyper_ui/shared/widget/abstract/input_control/input_control.dart';
 export 'package:flutter_hyper_ui/shared/widget/button/button.dart';
 export 'package:flutter_hyper_ui/shared/widget/checkbox/checkbox.dart';
-export 'package:flutter_hyper_ui/shared/widget/color_picker/color_picker.dart';
 export 'package:flutter_hyper_ui/shared/widget/combo/combo.dart';
 export 'package:flutter_hyper_ui/shared/widget/datepicker/datepicker.dart';
 export 'package:flutter_hyper_ui/shared/widget/datepicker/timepicker.dart';

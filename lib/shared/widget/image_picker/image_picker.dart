@@ -1,9 +1,14 @@
 import 'dart:developer';
 import 'dart:io';
+import 'package:dio/dio.dart';
+import 'package:file_picker/file_picker.dart';
+import 'package:file_picker_cross/file_picker_cross.dart';
 import 'package:flutter_hyper_ui/core.dart';
+import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:path/path.dart' as path;
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:uuid/uuid.dart';
 
 FilePickerCross? pickedFileInImagePicker;
 FilePickerResult? filePickerResult;
@@ -64,97 +69,54 @@ class _ExImagePickerState extends State<ExImagePicker>
       onTap: () async {
         if (loading) return;
 
-        if (kIsWeb || Platform.isWindows) {
-          FilePickerCross myFile;
-          try {
-            myFile = await FilePickerCross.importFromStorage(
-              type: FileTypeCross.custom,
-              fileExtension: 'jpg, png',
-            );
-          } on Exception catch (_) {
-            log("No File is Selected or File Picker Error!!");
-            return;
-          }
+        filePickerResult = await FilePicker.platform.pickFiles(
+          allowMultiple: false,
+        );
+        if (filePickerResult == null) return;
+        if (filePickerResult!.files.isEmpty) return;
 
-          loading = true;
-          setState(() {});
+        loading = true;
+        setState(() {});
 
-          var compressedFile = widget.compress == true
-              ? myFile.compressImage()
-              : myFile.toUint8List();
+        var file = filePickerResult!.files[0];
+        var filename = const Uuid().v1() + "_" + path.basename(file.name);
+        //Compress Image
+        Directory tempDir = await getTemporaryDirectory();
+        String tempPath = tempDir.path;
+        String targetpath = "$tempPath/$filename";
+        File targetFile = File(targetpath);
 
-          var uploadedImageUrl = await ImagePickerController.uploadImage(
-            imageBytes: compressedFile,
-            fileName: myFile.fileName!,
-          );
+        await FlutterImageCompress.compressAndGetFile(
+          file.path!,
+          targetpath,
+          quality: 50,
+        );
 
-          if (uploadedImageUrl == null) {
-            loading = false;
-            setState(() {});
-            return;
-          }
+        final formData = FormData.fromMap({
+          'image': MultipartFile.fromBytes(
+            targetFile.readAsBytesSync(),
+            filename: "upload.jpg",
+          ),
+        });
 
-          imageUrl = uploadedImageUrl;
-          Input.set(widget.id, imageUrl);
-          setState(() {});
+        var res = await Dio().post(
+          'https://api.imgbb.com/1/upload?key=b55ef3fd02b80ab180f284e479acd7c4',
+          data: formData,
+        );
 
-          if (widget.onChanged != null) {
-            widget.onChanged!(imageUrl!);
-          }
+        var data = res.data["data"];
+        var url = data["url"];
 
-          loading = false;
-          setState(() {});
-        } else {
-          filePickerResult = await FilePicker.platform.pickFiles(
-            allowMultiple: false,
-          );
-          if (filePickerResult == null) return;
-          if (filePickerResult!.files.isEmpty) return;
+        imageUrl = url;
+        Input.set(widget.id, imageUrl);
+        setState(() {});
 
-          loading = true;
-          setState(() {});
-
-          var file = filePickerResult!.files[0];
-          var filename = const Uuid().v1() + "_" + path.basename(file.name);
-          //Compress Image
-          Directory tempDir = await getTemporaryDirectory();
-          String tempPath = tempDir.path;
-          String targetpath = "$tempPath/$filename";
-          File targetFile = File(targetpath);
-
-          await FlutterImageCompress.compressAndGetFile(
-            file.path!,
-            targetpath,
-            quality: 50,
-          );
-
-          final formData = FormData.fromMap({
-            'image': MultipartFile.fromBytes(
-              targetFile.readAsBytesSync(),
-              filename: "upload.jpg",
-            ),
-          });
-
-          var res = await Dio().post(
-            // 'https://api.imgbb.com/1/upload?expiration=600&key=b55ef3fd02b80ab180f284e479acd7c4',
-            'https://api.imgbb.com/1/upload?key=b55ef3fd02b80ab180f284e479acd7c4',
-            data: formData,
-          );
-
-          var data = res.data["data"];
-          var url = data["url"];
-
-          imageUrl = url;
-          Input.set(widget.id, imageUrl);
-          setState(() {});
-
-          if (widget.onChanged != null) {
-            widget.onChanged!(imageUrl!);
-          }
-
-          loading = false;
-          setState(() {});
+        if (widget.onChanged != null) {
+          widget.onChanged!(imageUrl!);
         }
+
+        loading = false;
+        setState(() {});
       },
       child: Container(
         width: MediaQuery.of(context).size.width,
