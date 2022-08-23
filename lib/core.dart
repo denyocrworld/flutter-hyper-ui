@@ -1,7 +1,6 @@
 export 'package:flutter_hyper_ui/core.dart';
 export 'package:flutter_hyper_ui/firebase_options.dart';
 export 'package:flutter_hyper_ui/main.dart';
-export 'package:flutter_hyper_ui/setup.dart';
 export 'package:flutter_hyper_ui/shared/util/firebase/firebase_auth_ext.dart';
 export 'package:flutter_hyper_ui/shared/util/focus_helper/focus_helper.dart';
 export 'package:flutter_hyper_ui/shared/util/input/input.dart';
