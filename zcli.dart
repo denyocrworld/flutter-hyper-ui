@@ -106,6 +106,10 @@ removeAllUnusedPackages() async {
   var pubspecPackages = [];
   var usedPackages = [];
   bool dependenciesBlock = false;
+
+  //
+
+  //
   Future getProjectInfo() async {
     var content = File("./pubspec.yaml").readAsStringSync();
     var lines = content.split("\n");
@@ -143,6 +147,11 @@ removeAllUnusedPackages() async {
       if (usedPackages.contains(p) == false) {
         unusedPackages.add(p);
       }
+    }
+
+    var f = File("./lib/generated_plugin_registrant.dart");
+    if (f.existsSync()) {
+      f.deleteSync();
     }
 
     var content = File("./pubspec.yaml").readAsStringSync();

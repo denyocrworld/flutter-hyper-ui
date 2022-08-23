@@ -7,7 +7,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  mobile_scanner: ^2.0.0 #ignore
   intl: ^0.17.0
   google_fonts: ^2.1.0
   file_picker: ^3.0.1
@@ -37,8 +36,8 @@ dependencies:
   image_picker:
 
   # FIREBASE
-  firebase_core:
-  firebase_auth:
+  firebase_core: #ignore
+  firebase_auth: #ignore
   cloud_firestore:  
 
   # STATE MANAGEMENT

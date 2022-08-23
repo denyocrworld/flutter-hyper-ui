@@ -13,7 +13,6 @@ import 'package:firebase_auth_web/firebase_auth_web.dart';
 import 'package:firebase_core_web/firebase_core_web.dart';
 import 'package:geolocator_web/geolocator_web.dart';
 import 'package:image_picker_for_web/image_picker_for_web.dart';
-import 'package:mobile_scanner/mobile_scanner_web_plugin.dart';
 import 'package:package_info_plus_web/package_info_plus_web.dart';
 import 'package:share_plus_web/share_plus_web.dart';
 import 'package:url_launcher_web/url_launcher_web.dart';
@@ -29,7 +28,6 @@ void registerPlugins(Registrar registrar) {
   FirebaseCoreWeb.registerWith(registrar);
   GeolocatorPlugin.registerWith(registrar);
   ImagePickerPlugin.registerWith(registrar);
-  MobileScannerWebPlugin.registerWith(registrar);
   PackageInfoPlugin.registerWith(registrar);
   SharePlusPlugin.registerWith(registrar);
   UrlLauncherPlugin.registerWith(registrar);
