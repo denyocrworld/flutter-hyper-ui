@@ -346,7 +346,7 @@ class DeveloperHomeView extends StatelessWidget {
               ),
               //#END
 
-              //#TEMPLATE button_icon_stadium_outline
+              //#TEMPLATE button_icon_outline_stadium
               OutlinedButton.icon(
                 icon: const Icon(Icons.thumb_up),
                 label: const Text("Like"),
@@ -358,7 +358,7 @@ class DeveloperHomeView extends StatelessWidget {
               ),
               //#END
 
-              //#TEMPLATE button_icon_radius_outline
+              //#TEMPLATE button_icon_outline_radius
               OutlinedButton.icon(
                 icon: const Icon(Icons.thumb_up),
                 label: const Text("Like"),
@@ -372,7 +372,7 @@ class DeveloperHomeView extends StatelessWidget {
               ),
               //#END
 
-              //#TEMPLATE button_icon_beveled_outline
+              //#TEMPLATE button_icon_outline_beveled
               OutlinedButton.icon(
                 icon: const Icon(Icons.thumb_up),
                 label: const Text("Like"),
@@ -387,13 +387,61 @@ class DeveloperHomeView extends StatelessWidget {
               //#END
 
               //#TEMPLATE icon
-              const Icon(Icons.developer_board),
+              const Icon(
+                Icons.developer_board,
+                size: 24.0,
+              ),
+              //#END
+
+              //#TEMPLATE icon_image
+              const ImageIcon(
+                NetworkImage(
+                  "https://i.ibb.co/rsz6JWq/751463.png",
+                ),
+                size: 24.0,
+              ),
+              //#END
+
+              //#TEMPLATE icon_image_asset
+              const ImageIcon(
+                AssetImage(
+                  "assets/icon/icon.png",
+                ),
+                size: 24.0,
+              ),
               //#END
 
               //#TEMPLATE icon_button
               IconButton(
                 onPressed: () {},
-                icon: const Icon(Icons.add),
+                icon: const Icon(
+                  Icons.add,
+                  size: 24.0,
+                ),
+              ),
+              //#END
+
+              //#TEMPLATE icon_image_button
+              IconButton(
+                onPressed: () {},
+                icon: const ImageIcon(
+                  NetworkImage(
+                    "https://i.ibb.co/rsz6JWq/751463.png",
+                  ),
+                  size: 24.0,
+                ),
+              ),
+              //#END
+
+              //#TEMPLATE icon_image_asset_button
+              IconButton(
+                onPressed: () {},
+                icon: const ImageIcon(
+                  AssetImage(
+                    "assets/icon/icon.png",
+                  ),
+                  size: 24.0,
+                ),
               ),
               //#END
 
@@ -416,6 +464,7 @@ class DeveloperHomeView extends StatelessWidget {
                     ),
                     helperText: "What's your name?",
                   ),
+                  onChanged: (value) {},
                 ),
               ),
               //#END
@@ -442,6 +491,7 @@ class DeveloperHomeView extends StatelessWidget {
                     ),
                     helperText: "What's your name?",
                   ),
+                  onChanged: (value) {},
                 ),
               ),
               //#END
@@ -468,6 +518,7 @@ class DeveloperHomeView extends StatelessWidget {
                     ),
                     helperText: 'Enter your email address',
                   ),
+                  onChanged: (value) {},
                 ),
               ),
               //#END
@@ -494,23 +545,101 @@ class DeveloperHomeView extends StatelessWidget {
                     ),
                     helperText: 'Enter your password',
                   ),
+                  onChanged: (value) {},
                 ),
               ),
               //#END
 
-              //#TEMPLATE textfieldrad
+              //#TEMPLATE textfield_radius
               Container(
-                padding: const EdgeInsets.all(6),
+                padding: const EdgeInsets.all(12),
                 margin: const EdgeInsets.only(),
                 child: TextFormField(
+                  initialValue: null,
                   decoration: InputDecoration(
                     filled: true,
                     fillColor: Colors.white,
                     labelText: "Amount",
+                    hintText: "Search",
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
                   ),
+                  onChanged: (value) {},
+                ),
+              ),
+              //#END
+
+              //#TEMPLATE textfield_search1
+              Container(
+                padding: const EdgeInsets.all(8),
+                margin: const EdgeInsets.only(),
+                decoration: BoxDecoration(
+                  color: Colors.grey[200],
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(12.0),
+                  ),
+                  border: Border.all(
+                    width: 1.0,
+                    color: Colors.grey[100]!,
+                  ),
+                ),
+                child: Row(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Icon(Icons.search),
+                    ),
+                    Expanded(
+                      child: TextFormField(
+                        initialValue: null,
+                        decoration: const InputDecoration.collapsed(
+                          filled: true,
+                          fillColor: Colors.transparent,
+                          hintText: "Search",
+                        ),
+                        onChanged: (value) {},
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              //#END
+              const SizedBox(
+                height: 20.0,
+              ),
+
+              //#TEMPLATE textfield_search2
+              Container(
+                padding: const EdgeInsets.all(8),
+                margin: const EdgeInsets.only(),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: const BorderRadius.all(
+                    Radius.circular(12.0),
+                  ),
+                  border: Border.all(
+                    width: 1.0,
+                    color: Colors.grey[400]!,
+                  ),
+                ),
+                child: Row(
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: Icon(Icons.search),
+                    ),
+                    Expanded(
+                      child: TextFormField(
+                        initialValue: null,
+                        decoration: const InputDecoration.collapsed(
+                          filled: true,
+                          fillColor: Colors.transparent,
+                          hintText: "Search",
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               //#END
