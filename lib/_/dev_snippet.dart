@@ -403,6 +403,12 @@ class DevSnippetView extends StatelessWidget {
             ),
             //#END
 
+            Container(
+              //#TEMPLATE decoration
+              decoration: const BoxDecoration(),
+              //#END
+            ),
+
             //----------------------------------------
             Container(
               height: 100.0,
