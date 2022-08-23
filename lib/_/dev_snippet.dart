@@ -428,7 +428,7 @@ class DevSnippetView extends StatelessWidget {
                     ),
                   ],
                   //#END
-                  //#TEMPLATE decorationimage
+                  //#TEMPLATE decoration_image
                   image: const DecorationImage(
                     image: NetworkImage(
                       "https://i.ibb.co/3pPYd14/freeban.jpg",
