@@ -74,7 +74,7 @@ class _ExLocationPickerState extends State<ExLocationPicker> {
               onPressed: () async {
                 if (Platform.isAndroid || Platform.isIOS) {
                   if (await Permission.location.request().isGranted) {
-                    Navigator.push(
+                    await Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => ExLocationPickerMapView(

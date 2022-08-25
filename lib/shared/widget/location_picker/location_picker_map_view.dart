@@ -322,7 +322,6 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                         onPressed: () async {
                           Input.set("${widget.id}_latitude", currentLatitude);
                           Input.set("${widget.id}_longitude", currentLongitude);
-
                           Navigator.pop(context);
                         },
                       ),
