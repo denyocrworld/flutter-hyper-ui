@@ -320,6 +320,8 @@ class LocationPickerMapState extends State<LocationPickerMap> {
                         color: primaryColor,
                         enabled: loading ? false : true,
                         onPressed: () async {
+                          Input.set(
+                              widget.id, "$currentLatitude,$currentLongitude");
                           Input.set("${widget.id}_latitude", currentLatitude);
                           Input.set("${widget.id}_longitude", currentLongitude);
                           Navigator.pop(context);
