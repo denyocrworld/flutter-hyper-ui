@@ -16,7 +16,7 @@ void main() async {
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: defaultTheme,
-      home: mainView,
+      home: const Scaffold(),
     ),
   );
 }
