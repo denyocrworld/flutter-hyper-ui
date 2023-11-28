@@ -1,6 +1,3 @@
-## Flutter Hyper UI Base Template
-https://capekngoding.com <br>
-https://www.youtube.com/c/capekngoding <br>
-
-Flutter Hyper Extension: <br>
-https://marketplace.visualstudio.com/items?itemName=denyocr.flutter-hyper-extension <br>
+Source code sudah usang,
+Versi terbaru ada disini:
+https://github.com/denyocrworld/hyper_ui
